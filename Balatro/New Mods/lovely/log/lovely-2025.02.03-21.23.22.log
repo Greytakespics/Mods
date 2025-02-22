@@ -1,0 +1,68 @@
+INFO - [♥] Lovely 0.6.0
+INFO - [♥] Game directory is at "X:\\SteamLibrary\\steamapps\\common\\Balatro"
+INFO - [♥] Writing logs to "C:\\Users\\Grayson\\AppData\\Roaming\\Balatro\\Mods\\lovely\\log"
+INFO - [♥] Using mod directory at "C:\\Users\\Grayson\\AppData\\Roaming\\Balatro\\Mods"
+INFO - [♥] Found .lovelyignore in 'Cryptid', skipping it.
+INFO - [♥] Found .lovelyignore in 'Talisman', skipping it.
+WARN - [♥] Unknown key `patches.47.?.match_indent` found in patch file at "C:\\Users\\Grayson\\AppData\\Roaming\\Balatro\\Mods\\smods-old-calc\\lovely\\fixes.toml", ignoring it
+INFO - [♥] Cleaning up dumps directory at "C:\\Users\\Grayson\\AppData\\Roaming\\Balatro\\Mods\\lovely\\dump"
+INFO - [♥] Initialization complete in 618ms
+INFO - [♥] Applied 12 patches to 'main.lua'
+INFO - [♥] Applied 5 patches to 'engine/controller.lua'
+INFO - [♥] Applied 11 patches to 'back.lua'
+INFO - [♥] Applied 5 patches to 'tag.lua'
+INFO - [♥] Applied 1 patch to 'engine/moveable.lua'
+INFO - [♥] Applied 2 patches to 'engine/sprite.lua'
+INFO - [♥] Applied 2 patches to 'engine/animatedsprite.lua'
+INFO - [♥] Applied 41 patches to 'functions/misc_functions.lua'
+INFO - [♥] Applied 24 patches to 'game.lua'
+INFO - [♥] Applied 1 patch to 'globals.lua'
+INFO - [♥] Applied 3 patches to 'engine/ui.lua'
+INFO - [♥] Applied 69 patches to 'functions/UI_definitions.lua'
+WARN - [♥] Pattern 'end\n    end\n\n    }) end\n' on target 'functions/state_events.lua' resulted in no matches
+INFO - [♥] Applied 58 patches to 'functions/state_events.lua'
+WARN - [♥] Regex '(?<indent>[\\t ]*)if G\\.F_NO_ACHIEVEMENTS then return end\\n[\\s\\S][\\s\\S]{16}--\\|LOCAL SETTINGS FILE' on target 'functions/common_events.lua' resulted in no matches
+INFO - [♥] Applied 72 patches to 'functions/common_events.lua'
+WARN - [♥] Pattern 'G.pack_cards:emplace(v)' on target 'functions/button_callbacks.lua' resulted in no matches
+INFO - [♥] Applied 33 patches to 'functions/button_callbacks.lua'
+INFO - [♥] Applied 126 patches to 'card.lua'
+INFO - [♥] Applied 6 patches to 'cardarea.lua'
+INFO - [♥] Applied 30 patches to 'blind.lua'
+INFO - [♥] Applied 2 patches to 'engine/text.lua'
+INFO - [G] Failed to connect to the debug server
+INFO - [G] 2025-02-03 21:23:29 :: DEBUG :: DebugConsole :: Steamodded Debug Socket started !
+INFO - [♥] Applied 9 patches to 'engine/sound_manager.lua'
+INFO - [♥] Applied 1 patch to 'engine/save_manager.lua'
+INFO - [G] 2025-02-03 21:23:30 :: TRACE :: Loader :: Processing Mod file (Legacy header): Cryptid.lua
+INFO - [G] 2025-02-03 21:23:30 :: TRACE :: Loader :: Saving Mod Info: Cryptid
+INFO - [G] 2025-02-03 21:23:31 :: TRACE :: Loader :: Processing Mod file (Legacy header): steamodded_metadata.lua
+INFO - [G] 2025-02-03 21:23:31 :: TRACE :: Loader :: Saving Mod Info: Talisman
+INFO - [G] 2025-02-03 21:23:31 :: TRACE :: Loader :: Mod Talisman was unable to load: 
+INFO - [G] 2025-02-03 21:23:31 :: TRACE :: Loader :: Mod Cryptid was unable to load: Missing Dependencies: 1: Talisman>=2.0.0-beta8
+
+
+INFO - [G] 2025-02-03 21:23:31 :: INFO  :: TIMER :: [0000] Injected Language in 0.001 ms
+INFO - [G] 2025-02-03 21:23:31 :: INFO  :: TIMER :: [0000] Injected [INTERNAL] in 13.410 ms
+INFO - [G] 2025-02-03 21:23:32 :: INFO  :: TIMER :: [0002] Injected Atlas in 556.912 ms
+INFO - [G] 2025-02-03 21:23:32 :: INFO  :: TIMER :: [0000] Injected Sound in 0.001 ms
+INFO - [G] 2025-02-03 21:23:32 :: INFO  :: TIMER :: [0008] Injected Stake in 0.229 ms
+INFO - [G] 2025-02-03 21:23:32 :: INFO  :: TIMER :: [0004] Injected Rarity in 0.020 ms
+INFO - [G] 2025-02-03 21:23:32 :: INFO  :: TIMER :: [0004] Injected ObjectType in 0.053 ms
+INFO - [G] 2025-02-03 21:23:32 :: INFO  :: TIMER :: [0047] Injected Center in 0.632 ms
+INFO - [G] 2025-02-03 21:23:32 :: INFO  :: TIMER :: [0007] Injected Undiscovered Sprite in 0.079 ms
+INFO - [G] 2025-02-03 21:23:32 :: INFO  :: TIMER :: [0002] Injected Blind in 0.017 ms
+INFO - [G] 2025-02-03 21:23:32 :: INFO  :: TIMER :: [0000] Injected Seal in 0.003 ms
+INFO - [G] 2025-02-03 21:23:32 :: INFO  :: TIMER :: [0004] Injected Suit in 0.176 ms
+INFO - [G] 2025-02-03 21:23:32 :: INFO  :: TIMER :: [0013] Injected Rank in 0.153 ms
+INFO - [G] 2025-02-03 21:23:32 :: INFO  :: TIMER :: [0016] Injected DeckSkin in 0.064 ms
+INFO - [G] 2025-02-03 21:23:32 :: INFO  :: TIMER :: [0012] Injected PokerHand in 0.139 ms
+INFO - [G] 2025-02-03 21:23:32 :: INFO  :: TIMER :: [0020] Injected Challenge in 0.030 ms
+INFO - [G] 2025-02-03 21:23:32 :: INFO  :: TIMER :: [0000] Injected Tag in 0.002 ms
+INFO - [G] 2025-02-03 21:23:32 :: INFO  :: TIMER :: [0004] Injected Sticker in 0.102 ms
+INFO - [G] 2025-02-03 21:23:32 :: INFO  :: TIMER :: [0000] Injected Shader in 0.001 ms
+INFO - [G] 2025-02-03 21:23:32 :: INFO  :: TIMER :: [0001] Injected Keybind in 0.014 ms
+INFO - [G] 2025-02-03 21:23:32 :: INFO  :: TIMER :: [0000] Injected Achievement in 0.069 ms
+INFO - [G] 2025-02-03 21:23:32 :: INFO  :: TIMER :: [0000] Injected [INTERNAL] in 0.004 ms
+INFO - [G] ERROR LOADING GAME: Card area 'shop_jokers' not instantiated before load
+INFO - [G] ERROR LOADING GAME: Card area 'shop_vouchers' not instantiated before load
+INFO - [G] ERROR LOADING GAME: Card area 'shop_booster' not instantiated before load

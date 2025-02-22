@@ -1,0 +1,291 @@
+INFO - [♥] Lovely 0.6.0
+INFO - [♥] Game directory is at "X:\\SteamLibrary\\steamapps\\common\\Balatro"
+INFO - [♥] Writing logs to "C:\\Users\\Grayson\\AppData\\Roaming\\Balatro\\Mods\\lovely\\log"
+INFO - [♥] Using mod directory at "C:\\Users\\Grayson\\AppData\\Roaming\\Balatro\\Mods"
+WARN - [♥] Unknown key `patches.17.?.match_indent` found in patch file at "C:\\Users\\Grayson\\AppData\\Roaming\\Balatro\\Mods\\Cryptid\\lovely\\Code.toml", ignoring it
+WARN - [♥] Unknown key `patches.7.?.match_indent` found in patch file at "C:\\Users\\Grayson\\AppData\\Roaming\\Balatro\\Mods\\Cryptid\\lovely\\Voucher.toml", ignoring it
+WARN - [♥] Unknown key `patches.47.?.match_indent` found in patch file at "C:\\Users\\Grayson\\AppData\\Roaming\\Balatro\\Mods\\smods-old-calc\\lovely\\fixes.toml", ignoring it
+INFO - [♥] Cleaning up dumps directory at "C:\\Users\\Grayson\\AppData\\Roaming\\Balatro\\Mods\\lovely\\dump"
+INFO - [♥] Initialization complete in 34ms
+WARN - [♥] Pattern 'G.ARGS.score_intensity.organ = G.video_organ or G.ARGS.score_intensity.required_score > 0 and math.max(math.min(0.4, 0.1*math.log(G.ARGS.score_intensity.earned_score/(G.ARGS.score_intensity.required_score+1), 5)),0.) or 0' on target 'main.lua' resulted in no matches
+WARN - [♥] Pattern 'if type(G.GAME.current_round.current_hand.chips) ~= \'number\' or type(G.GAME.current_round.current_hand.mult) ~= \'number\' then' on target 'main.lua' resulted in no matches
+INFO - [♥] Applied 15 patches to 'main.lua'
+INFO - [♥] Applied 2 patches to 'engine/string_packer.lua'
+INFO - [♥] Applied 6 patches to 'engine/controller.lua'
+INFO - [♥] Applied 13 patches to 'back.lua'
+INFO - [♥] Applied 15 patches to 'tag.lua'
+INFO - [♥] Applied 2 patches to 'engine/moveable.lua'
+INFO - [♥] Applied 2 patches to 'engine/sprite.lua'
+INFO - [♥] Applied 2 patches to 'engine/animatedsprite.lua'
+WARN - [♥] Pattern 'assembled_string = assembled_string..(type(subpart) == \'string\' and subpart or args.vars[tonumber(subpart[1])] or \'ERROR\')' on target 'functions/misc_functions.lua' resulted in no matches
+INFO - [♥] Applied 48 patches to 'functions/misc_functions.lua'
+INFO - [♥] Applied 78 patches to 'game.lua'
+INFO - [♥] Applied 1 patch to 'globals.lua'
+INFO - [♥] Applied 6 patches to 'engine/ui.lua'
+WARN - [♥] Pattern '{card_limit = _size, type = \'consumeable\', highlight_limit = 1}' on target 'functions/UI_definitions.lua' resulted in no matches
+WARN - [♥] Pattern '{n=G.UIT.T, config={text = G.GAME.hands[handname].chips, scale = 0.45, colour = G.C.UI.TEXT_LIGHT}},' on target 'functions/UI_definitions.lua' resulted in no matches
+WARN - [♥] Pattern '{n=G.UIT.T, config={text = G.GAME.hands[handname].mult, scale = 0.45, colour = G.C.UI.TEXT_LIGHT}}' on target 'functions/UI_definitions.lua' resulted in no matches
+INFO - [♥] Applied 86 patches to 'functions/UI_definitions.lua'
+WARN - [♥] Pattern 'end\n    end\n\n    }) end\n' on target 'functions/state_events.lua' resulted in no matches
+WARN - [♥] Pattern 'ease_to = G.GAME.chips + math.floor(hand_chips * mult) * (e and e.antiscore and -1 or 1),' on target 'functions/state_events.lua' resulted in no matches
+WARN - [♥] Pattern 'if cards_destroyed[i].ability.name == \'Glass Card\' then' on target 'functions/state_events.lua' resulted in no matches
+WARN - [♥] Pattern 'local hand_space = e or math.min(#G.deck.cards, G.hand.config.card_limit - #G.hand.cards)' on target 'functions/state_events.lua' resulted in no matches
+WARN - [♥] Pattern 'if SMODS.has_enhancement(scoring_hand[i], \'m_glass\') and not scoring_hand[i].debuff and pseudorandom(\'glass\') < G.GAME.probabilities.normal/scoring_hand[i].ability.extra then' on target 'functions/state_events.lua' resulted in no matches
+INFO - [♥] Applied 115 patches to 'functions/state_events.lua'
+WARN - [♥] Regex '(?<indent>[\\t ]*)if G\\.F_NO_ACHIEVEMENTS then return end\\n[\\s\\S][\\s\\S]{16}--\\|LOCAL SETTINGS FILE' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'function generate_card_ui(_c, full_UI_table, specific_vars, card_type, badges, hide_desc, main_start, main_end)' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern '{n=G.UIT.T, config={text = localize(\'$\')..config.dollars, scale = 1.2*scale, colour = G.C.WHITE, shadow = true, juice = true}}' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'bbbbb' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'elseif _c.name == \'Cryptid\' then loc_vars = {_c.config.extra}' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'elseif _c.name == \"Clearance Sale\" or _c.name == \"Liquidation\" then loc_vars = {_c.config.extra}' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'elseif v.boss.showdown and (G.GAME.round_resets.ante)%G.GAME.win_ante == 0 and G.GAME.round_resets.ante >= 2 then' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'if v == \'negative_consumable\' then info_queue[#info_queue+1] = {key = \'e_negative_consumable\', set = \'Edition\', config = {extra = 1}} end' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'func = (function() if eval_func(card) then if not first or first then card:juice_up(0.1, 0.1) end;juice_card_until(card, eval_func, nil, 0.8) end return true end)' on target 'functions/common_events.lua' resulted in no matches
+INFO - [♥] Applied 126 patches to 'functions/common_events.lua'
+WARN - [♥] Pattern 'G.pack_cards:emplace(v)' on target 'functions/button_callbacks.lua' resulted in no matches
+INFO - [♥] Applied 52 patches to 'functions/button_callbacks.lua'
+WARN - [♥] Pattern 'if center_table.name == \'Overstock\' or center_table.name == \'Overstock Plus\' then' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'if self.ability.name == \'Campfire\' and G.GAME.blind.boss and not (G.GAME.blind.config and G.GAME.blind.config.bonus) and self.ability.x_mult > 1 then' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'if self.ability.name:find(\'Arcana\') then' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'if center_table.name == \'Overstock\' or center_table.name == \'Overstock Plus\' then' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'if self.ability.name == \'The Hermit\' or self.ability.consumeable.hand_type or self.ability.name == \'Temperance\' or self.ability.name == \'Black Hole\' then' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'if self.ability.queue_negative_removal then' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'if G.GAME.blind then G.E_MANAGER:add_event(Event({ func = function() G.GAME.blind:set_blind(nil, true, nil); return true end })) end' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'elseif self.ability.name == \'Business Card\' then loc_vars = {\'\'..(G.GAME and G.GAME.probabilities.normal or 1), self.ability.extra}' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'pseudorandom(\'business\') < G.GAME.probabilities.normal/self.ability.extra then' on target 'card.lua' resulted in no matches
+INFO - [♥] Applied 229 patches to 'card.lua'
+WARN - [♥] Pattern 'table.sort(self.cards, function (a, b) return a.T.x + a.T.w/2 - 100*(a.pinned and a.sort_id or 0) < b.T.x + b.T.w/2 - 100*(b.pinned and b.sort_id or 0) end)' on target 'cardarea.lua' resulted in no matches
+INFO - [♥] Applied 14 patches to 'cardarea.lua'
+INFO - [♥] Applied 32 patches to 'blind.lua'
+INFO - [♥] Applied 5 patches to 'engine/text.lua'
+INFO - [G] Failed to connect to the debug server
+INFO - [G] 2025-02-15 21:49:18 :: DEBUG :: DebugConsole :: Steamodded Debug Socket started !
+INFO - [♥] Applied 9 patches to 'engine/sound_manager.lua'
+INFO - [♥] Applied 2 patches to 'engine/string_packer.lua'
+INFO - [G] 2025-02-15 21:49:19 :: WARN  :: Loader :: Found lone Lua file AceInTheHoleDeck.lua in Mods directory :: Please place the files for each mod in its own subdirectory.
+INFO - [G] 2025-02-15 21:49:19 :: TRACE :: Loader :: Processing Mod file (Legacy header): AceInTheHoleDeck.lua
+INFO - [G] 2025-02-15 21:49:19 :: TRACE :: Loader :: Saving Mod Info: AceInTheHole
+INFO - [G] 2025-02-15 21:49:19 :: INFO  :: DefaultLogger :: Valid JSON file found
+INFO - [G] 2025-02-15 21:49:19 :: TRACE :: Loader :: Processing Mod file (Legacy header): Cryptid.lua
+INFO - [G] 2025-02-15 21:49:19 :: TRACE :: Loader :: Saving Mod Info: Cryptid
+INFO - [G] 2025-02-15 21:49:19 :: WARN  :: Loader :: Found lone Lua file DeckOf8s.lua in Mods directory :: Please place the files for each mod in its own subdirectory.
+INFO - [G] 2025-02-15 21:49:19 :: TRACE :: Loader :: Processing Mod file (Legacy header): DeckOf8s.lua
+INFO - [G] 2025-02-15 21:49:19 :: TRACE :: Loader :: Saving Mod Info: DeckOf8
+INFO - [G] 2025-02-15 21:49:19 :: ERROR :: Loader :: Found invalid metadata JSON file at C:\Users\Grayson\AppData\Roaming\Balatro\Mods/SylvieSilly-0.1.1/.vs/VSWorkspaceState.json, ignoring: [SMODS _ "src/loader.lua"]:225: id
+INFO - [G] 2025-02-15 21:49:19 :: TRACE :: Loader :: Processing Mod file (Legacy header): SylvieSilly.lua
+INFO - [G] 2025-02-15 21:49:19 :: TRACE :: Loader :: Saving Mod Info: SylvieSilly
+INFO - [G] 2025-02-15 21:49:19 :: TRACE :: Loader :: Processing Mod file (Legacy header): steamodded_metadata.lua
+INFO - [G] 2025-02-15 21:49:19 :: TRACE :: Loader :: Saving Mod Info: Talisman
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_backs
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_suit_normal_1
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_moons
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_suit_normal_1
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_vouchers
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_suit_normal_1
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_blinds
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_suit_normal_1
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_spectrals
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_suit_normal_1
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_boosters
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_suit_normal_1
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: The Booster named Suits Pack with the slug p_suit_normal_1 have been registered at the id 34.
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_backs
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_suit_normal_2
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_moons
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_suit_normal_2
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_vouchers
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_suit_normal_2
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_blinds
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_suit_normal_2
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_spectrals
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_suit_normal_2
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_boosters
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_suit_normal_2
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: The Booster named Suits Pack with the slug p_suit_normal_2 have been registered at the id 35.
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_backs
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_suit_jumbo
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_moons
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_suit_jumbo
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_vouchers
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_suit_jumbo
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_blinds
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_suit_jumbo
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_spectrals
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_suit_jumbo
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_boosters
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_suit_jumbo
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: The Booster named Jumbo Suits Pack with the slug p_suit_jumbo have been registered at the id 36.
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_backs
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_suit_mega
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_moons
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_suit_mega
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_vouchers
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_suit_mega
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_blinds
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_suit_mega
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_spectrals
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_suit_mega
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_boosters
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_suit_mega
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: The Booster named Mega Suits Pack with the slug p_suit_mega have been registered at the id 37.
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_backs
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_bonus_normal
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_moons
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_bonus_normal
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_vouchers
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_bonus_normal
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_blinds
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_bonus_normal
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_spectrals
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_bonus_normal
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_boosters
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_bonus_normal
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: The Booster named Bonus Pack with the slug p_bonus_normal have been registered at the id 38.
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_backs
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_bonus_jumbo
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_moons
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_bonus_jumbo
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_vouchers
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_bonus_jumbo
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_blinds
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_bonus_jumbo
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_spectrals
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_bonus_jumbo
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_boosters
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_bonus_jumbo
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: The Booster named Jumbo Bonus Pack with the slug p_bonus_jumbo have been registered at the id 39.
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_backs
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_fortune_normal
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_moons
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_fortune_normal
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_vouchers
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_fortune_normal
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_blinds
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_fortune_normal
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_spectrals
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_fortune_normal
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_boosters
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_fortune_normal
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: The Booster named Fortune Pack with the slug p_fortune_normal have been registered at the id 40.
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_backs
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_fortune_jumbo
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_moons
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_fortune_jumbo
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_vouchers
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_fortune_jumbo
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_blinds
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_fortune_jumbo
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_spectrals
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_fortune_jumbo
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: sylvie_boosters
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: p_fortune_jumbo
+INFO - [G] 2025-02-15 21:49:19 :: DEBUG :: DefaultLogger :: The Booster named Jumbo Fortune Pack with the slug p_fortune_jumbo have been registered at the id 41.
+INFO - [G] Loading file Achievements.lua
+INFO - [G] Loading file Antimatter.lua
+INFO - [G] Loading file Blinds.lua
+INFO - [G] Loading file Challenges.lua
+INFO - [G] Loading file CodeCards.lua
+INFO - [G] Loading file CryptidJokerDisplay.lua
+INFO - [G] Warning: CryptidJokerDisplay.lua has no items
+INFO - [G] Loading file Decks.lua
+INFO - [G] Loading file Enhanced.lua
+INFO - [G] Loading file EpicJokers.lua
+INFO - [G] Loading file Exotic.lua
+INFO - [G] Loading file M.lua
+INFO - [G] Loading file Misc.lua
+INFO - [G] Loading file MiscJokers.lua
+INFO - [G] Loading file Planets.lua
+INFO - [G] Loading file Sleeves.lua
+INFO - [G] Loading file Spectrals.lua
+INFO - [G] Loading file Spooky.lua
+INFO - [G] Loading file Stakes.lua
+INFO - [G] Loading file Tags.lua
+INFO - [G] Loading file Vouchers.lua
+INFO - [G] Loading file dummy_https.lua
+INFO - [G] Loading file dummy_timerblinds.lua
+INFO - [G] Warning: dummy_timerblinds.lua has no items
+INFO - [G] line not found
+INFO - [G] file not found: main.lua: No such file or directory
+INFO - [G] file not found: main.lua: No such file or directory
+INFO - [G] line not found
+INFO - [G] line not found
+INFO - [G] file not found: main.lua: No such file or directory
+INFO - [G] 2025-02-15 21:49:19 :: ERROR :: StackTrace :: Oops! The game crashed
+[SMODS Cryptid "Cryptid.lua"]:1606: attempt to call a table value
+Stack Traceback
+===============
+(1) Lua local 'handler' at file 'main.lua:612'
+	Local variables:
+	 msg = string: "[SMODS Cryptid \"Cryptid.lua\"]:1606: attempt to call a table value"
+	 (*temporary) = Lua function '?' (defined at line 31 of chunk [SMODS _ "src/logging.lua"])
+	 (*temporary) = string: "Oops! The game crashed\
+"
+(2) LÖVE function at file 'boot.lua:352' (best guess)
+	Local variables:
+	 errhand = Lua function '?' (defined at line 598 of chunk main.lua)
+	 handler = Lua function '?' (defined at line 598 of chunk main.lua)
+(3) main chunk of file 'Cryptid.lua' at line 1606 (from mod with id Cryptid)
+(4) Lua global 'loadMods' at Steamodded file 'src/loader.lua:570' 
+	Local variables:
+	 modsDirectory = string: "C:\\Users\\Grayson\\AppData\\Roaming\\Balatro\\Mods"
+	 header_components = table: 0x1f4d9a38  {version:table: 0x1f7000b8, id:table: 0x1f4d9ac0, conflicts:table: 0x1f5f0108 (more...)}
+	 json_spec = table: 0x1f52c1f0  {provides:table: 0x1fb513c8, __:table: 0x1fb51348, version:table: 0x1fc3c1a0 (more...)}
+	 used_prefixes = table: 0x1fc46ef8  {talisman:Talisman, cry:Cryptid}
+	 lovely_directories = table: 0x1fc46f20  {1:C:\Users\Grayson\AppData\Roaming\Balatro\Mods/Cosmos-0.0.2/, 2:C:\Users\Grayson\AppData\Roaming\Balatro\Mods/Cryptid/ (more...)}
+	 processDirectory = Lua function '?' (defined at line 184 of chunk [SMODS _ "src/loader.lua"])
+	 keyset = table: 0x1f8c10d0  {1:0, 2:2147483647}
+	 check_dependencies = Lua function '?' (defined at line 418 of chunk [SMODS _ "src/loader.lua"])
+	 (for generator) = C function: builtin#6
+	 (for state) = table: 0x1f8c10d0  {1:0, 2:2147483647}
+	 (for control) = number: 2
+	 _ = number: 2
+	 priority = number: 2.14748e+09
+	 (for generator) = C function: builtin#6
+	 (for state) = table: 0x1f4bda00  {1:table: 0x1f902480}
+	 (for control) = number: 1
+	 _ = number: 1
+	 mod = table: 0x1f902480  {version:0.5.3c, id:Cryptid, main_file:Cryptid.lua, lovely:true, can_load:true (more...)}
+(5) Lua global 'initSteamodded' at Steamodded file 'src/loader.lua:652' 
+(6) Lua upvalue 'su' at file 'game.lua:313'
+	Local variables:
+	 self = table: 0x1f603770  {F_GUIDE:false, F_CRASH_REPORTS:false, F_QUIT_BUTTON:true, F_ENGLISH_ONLY:false (more...)}
+	 settings = string: "return {[\"version\"]=\"1.0.1n-FULL\",[\"reduced_motion\"]=false,[\"paused\"]=false,[\"QUEUED_CHANGE\"]={},[\"COMP\"]={[\"prev_name\"]=\"\",[\"name\"]=\"\",[\"score\"]=1460250,},[\"colourblind_option\"]=false,[\"play_button_pos\"]=2,[\"CUSTOM_DECK\"]={[\"Collabs\"]={[\"Spades\"]=\"default\",[\"Hearts\"]=\"default\",[\"Diamonds\"]=\"default\",[\"Clubs\"]=\"default\",},},[\"crashreports\"]=false,[\"tutorial_progress\"]={[\"hold_parts\"]={},[\"section\"]=\"big_blind\",[\"completed_parts\"]={[\"first_hand_3\"]=true,[\"small_blind\"]=true,[\"big_blind\"]=true,[\"first_hand_4\"]=true,[\"shop_1\"]=true,[\"first_hand_section\"]=true,[\"first_hand_2\"]=true,[\"first_hand\"]=true,},},[\"language\"]=\"en-us\",[\"tutorial_complete\"]=true,[\"run_stake_stickers\"]=false,[\"WINDOW\"]={[\"vsync\"]=1,[\"display_names\"]={[2]=\"2\",[1]=\"1\",},[\"screenmode\"]=\"Borderless\",[\"DISPLAYS\"]={[2]={[\"screen_resolutions\"]={[\"strings\"]={[1]=\"1920 X 1080\",},[\"values\"]={[1]={[\"w\"]=1920,[\"h\"]=1080,},},},[\"DPI_scale\"]=1,[\"MONITOR_DIMS\"]={[\"height\"]=1080,[\"width\"]=1920,},},[1]={[\"screen_resolutions\"]={[\"strings\"]={[1]=\"3840 X 2160\",},[\"values\"]={[1]={[\"w\"]=1920,[\"h\"]=1080,},},},[\"screen_res\"]={[\"w\"]=1920,[\"h\"]=1080,},[\"DPI_scale\"]=1,[\"MONITOR_DIMS\"]={[\"height\"]=2160,[\"width\"]=3840,},},},[\"selected_display\"]=1,},[\"screenshake\"]=9.6997420538938,[\"cryptid_notifs\"]={[\"jimball\"]=true,},[\"SOUND\"]={[\"volume\"]=14.799731686621,[\"music_volume\"]=0,[\"game_sounds_volume\"]=7.3827870720122,},[\"music_control\"]={[\"current_track\"]=\"\",[\"desired_track\"]=\"\",[\"lerp\"]=1,},[\"ACHIEVEMENTS_EARNED\"]={[\"card_discarder\"]=true,[\"heads_up\"]=true,[\"retrograde\"]=true,[\"royale\"]=true,[\"cartomancy\"]=true,[\"mid_stakes\"]=true,[\"low_stakes\"]=true,[\"ante_upper\"]=true,[\"ach_cry_now_the_fun_begins\"]=true,[\"ach_cry_exodia\"]=true,[\"you_get_what_you_get\"]=true,[\"legendary\"]=true,[\"_10k\"]=true,[\"_1000k\"]=true,[\"ach_cry_jokes_on_you\"]=true,[\"ach_cry_break_infinity\"]=true,[\"ante_up\"]=true,[\"card_player\"]=true,},[\"profile\"]=1,[\"current_setup\"]=\"New Run\",[\"GAMESPEED\"]=4,[\"ambient_control\"]={[\"ambientFire1\"]={[\"per\"]=1.1,[\"vol\"]=0,},[\"ambientOrgan1\"]={[\"per\"]=0.7,[\"vol\"]=0,},[\"ambientFire2\"]={[\"per\"]=1.05,[\"vol\"]=0,},[\"ambientFire3\"]={[\"per\"]=1,[\"vol\"]=0,},},[\"DEMO\"]={[\"win_CTA_shown\"]=true,[\"quit_CTA_shown\"]=true,[\"timed_CTA_shown\"]=true,[\"total_uptime\"]=85.102310212801,},[\"GRAPHICS\"]={[\"texture_scaling\"]=2,[\"crt\"]=70,[\"shadows\"]=\"On\",[\"bloom\"]=1,},}"
+	 settings_ver = nil
+	 new_colour_proto = table: 0x1f60bb50  {Spades:table: 0x1f60bdd8, Hearts:table: 0x1f60bc48, Diamonds:table: 0x1f60bd00 (more...)}
+	 sound_files = table: 0x1f9b18c0  {1:ambientFire1.ogg, 2:ambientFire2.ogg, 3:ambientFire3.ogg, 4:ambientOrgan1.ogg (more...)}
+	 shader_files = table: 0x1f9b5800  {1:CRT.fs, 2:background.fs, 3:booster.fs, 4:debuff.fs, 5:dissolve.fs, 6:flame.fs (more...)}
+(7) Lua method 'start_up' at file 'main.lua:2018'
+	Local variables:
+	 self = table: 0x1f603770  {F_GUIDE:false, F_CRASH_REPORTS:false, F_QUIT_BUTTON:true, F_ENGLISH_ONLY:false (more...)}
+(8) Lua field 'load' at file 'main.lua:955'
+(9) Lua function '?' at file 'main.lua:892' (best guess)
+(10) global C function 'xpcall'
+(11) LÖVE function at file 'boot.lua:368' (best guess)
+	Local variables:
+	 result = boolean: true
+	 main = nil
+(12) global C function 'xpcall'
+(13) LÖVE function at file 'boot.lua:377' (best guess)
+	Local variables:
+	 func = Lua function '(LÖVE Function)' (defined at line 355 of chunk [love "boot.lua"])
+	 inerror = boolean: true
+	 deferErrhand = Lua function '(LÖVE Function)' (defined at line 348 of chunk [love "boot.lua"])
+	 earlyinit = Lua function '(LÖVE Function)' (defined at line 355 of chunk [love "boot.lua"])
+
+INFO - [G] line not found
+INFO - [G] line not found
+INFO - [G] file not found: main.lua: No such file or directory
+INFO - [G] 2025-02-15 21:49:19 :: INFO  :: StackTrace :: Additional Context:
+Balatro Version: 1.0.1n-FULL
+Modded Version: 1.0.0~ALPHA-1304a-STEAMODDED
+LÖVE Version: 11.5.0
+Lovely Version: 0.6.0
+Steamodded Mods:
+    1: Sylvie's Silliness by NewtTheFish [ID: SylvieSilly]
+    2: Cryptid by MathIsFun_, Cryptid and Balatro Discords [ID: Cryptid, Priority: 2147483647, Version: 0.5.3c, Uses Lovely]
+    3: Deck of 8 by itiseren [ID: DeckOf8]
+    4: Cosmos by Cosmos [ID: Cosmos, Version: 1.0.0, Uses Lovely]
+    5: Talisman by MathIsFun_, Mathguy24, jenwalter666, cg-223 [ID: Talisman, Version: 2.0.2, Uses Lovely]
+        Break Infinity: omeganum
+    6: Ace in the Hole by Chamels and UnknownEternity [ID: AceInTheHole]
+Lovely Mods:

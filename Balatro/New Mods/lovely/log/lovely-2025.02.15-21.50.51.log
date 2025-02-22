@@ -1,0 +1,322 @@
+INFO - [♥] Lovely 0.6.0
+INFO - [♥] Game directory is at "X:\\SteamLibrary\\steamapps\\common\\Balatro"
+INFO - [♥] Writing logs to "C:\\Users\\Grayson\\AppData\\Roaming\\Balatro\\Mods\\lovely\\log"
+INFO - [♥] Using mod directory at "C:\\Users\\Grayson\\AppData\\Roaming\\Balatro\\Mods"
+WARN - [♥] Unknown key `patches.17.?.match_indent` found in patch file at "C:\\Users\\Grayson\\AppData\\Roaming\\Balatro\\Mods\\Cryptid\\lovely\\Code.toml", ignoring it
+WARN - [♥] Unknown key `patches.7.?.match_indent` found in patch file at "C:\\Users\\Grayson\\AppData\\Roaming\\Balatro\\Mods\\Cryptid\\lovely\\Voucher.toml", ignoring it
+INFO - [♥] Cleaning up dumps directory at "C:\\Users\\Grayson\\AppData\\Roaming\\Balatro\\Mods\\lovely\\dump"
+INFO - [♥] Initialization complete in 29ms
+WARN - [♥] Pattern 'G.ARGS.score_intensity.organ = G.video_organ or G.ARGS.score_intensity.required_score > 0 and math.max(math.min(0.4, 0.1*math.log(G.ARGS.score_intensity.earned_score/(G.ARGS.score_intensity.required_score+1), 5)),0.) or 0' on target 'main.lua' resulted in no matches
+WARN - [♥] Pattern 'if type(G.GAME.current_round.current_hand.chips) ~= \'number\' or type(G.GAME.current_round.current_hand.mult) ~= \'number\' then' on target 'main.lua' resulted in no matches
+INFO - [♥] Applied 4 patches to 'main.lua'
+INFO - [♥] Applied 2 patches to 'engine/string_packer.lua'
+INFO - [♥] Applied 1 patch to 'engine/controller.lua'
+INFO - [♥] Applied 2 patches to 'back.lua'
+INFO - [♥] Applied 10 patches to 'tag.lua'
+INFO - [♥] Applied 1 patch to 'engine/moveable.lua'
+INFO - [♥] Applied 8 patches to 'functions/misc_functions.lua'
+INFO - [♥] Applied 55 patches to 'game.lua'
+INFO - [♥] Applied 3 patches to 'engine/ui.lua'
+WARN - [♥] Pattern '{card_limit = _size, type = \'consumeable\', highlight_limit = 1}' on target 'functions/UI_definitions.lua' resulted in no matches
+INFO - [♥] Applied 19 patches to 'functions/UI_definitions.lua'
+WARN - [♥] Pattern 'ease_to = G.GAME.chips + math.floor(hand_chips * mult) * (e and e.antiscore and -1 or 1),' on target 'functions/state_events.lua' resulted in no matches
+WARN - [♥] Pattern 'if SMODS.has_enhancement(scoring_hand[i], \'m_glass\') and not scoring_hand[i].debuff and pseudorandom(\'glass\') < G.GAME.probabilities.normal/scoring_hand[i].ability.extra then' on target 'functions/state_events.lua' resulted in no matches
+WARN - [♥] Pattern 'if effects[ii].edition.p_dollars_mod then' on target 'functions/state_events.lua' resulted in no matches
+WARN - [♥] Pattern 'if SMODS.has_enhancement(scoring_hand[i], \'m_glass\') and not scoring_hand[i].debuff and pseudorandom(\'glass\') < G.GAME.probabilities.normal/(scoring_hand[i].ability.name == \'Glass Card\' and scoring_hand[i].ability.extra or G.P_CENTERS.m_glass.config.extra) then' on target 'functions/state_events.lua' resulted in no matches
+INFO - [♥] Applied 57 patches to 'functions/state_events.lua'
+WARN - [♥] Pattern 'bbbbb' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'local cfg = (card and card.ability) or _c[\'config\']' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'elseif v.boss.showdown and (G.GAME.round_resets.ante)%G.GAME.win_ante == 0 and G.GAME.round_resets.ante >= 2 then' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'func = (function() if eval_func(card) then if not first or first then card:juice_up(0.1, 0.1) end;juice_card_until(card, eval_func, nil, 0.8) end return true end)' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'elseif _c.effect == \'Lucky Card\' then loc_vars = {G.GAME.probabilities.normal, cfg.mult, 5, cfg.p_dollars, 15}' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'elseif _c.effect == \'Glass Card\' then loc_vars = {cfg.Xmult, G.GAME.probabilities.normal, cfg.extra}' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'elseif _c.name == \"The Wheel of Fortune\" then loc_vars = {G.GAME.probabilities.normal, cfg.extra};  info_queue[#info_queue+1] = G.P_CENTERS.e_foil; info_queue[#info_queue+1] = G.P_CENTERS.e_holo; info_queue[#info_queue+1] = G.P_CENTERS.e_polychrome;' on target 'functions/common_events.lua' resulted in no matches
+INFO - [♥] Applied 55 patches to 'functions/common_events.lua'
+INFO - [♥] Applied 19 patches to 'functions/button_callbacks.lua'
+WARN - [♥] Pattern 'if not v.custom_draw and k ~= \'focused_ui\' and k ~= \"front\" and k ~= \"back\" and k ~= \"soul_parts\" and k ~= \"center\" and k ~= \'floating_sprite\' and k~= \"shadow\" and k~= \"use_button\" and k ~= \'buy_button\' and k ~= \'buy_and_use_button\' and k~= \"debuff\" and k ~= \'price\' and k~= \'particles\' and k ~= \'h_popup\' then v:draw() end' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'if self.ability.name == \'Campfire\' and G.GAME.blind.boss and not (G.GAME.blind.config and G.GAME.blind.config.bonus) and self.ability.x_mult > 1 then' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'if self.edition[v.key:sub(3)] and v.shader then' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'elseif self.ability.name == \'Business Card\' then loc_vars = {\'\'..(G.GAME and G.GAME.probabilities.normal or 1), self.ability.extra}' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'pseudorandom(\'business\') < G.GAME.probabilities.normal/self.ability.extra then' on target 'card.lua' resulted in no matches
+INFO - [♥] Applied 107 patches to 'card.lua'
+INFO - [♥] Applied 9 patches to 'cardarea.lua'
+INFO - [♥] Applied 2 patches to 'blind.lua'
+INFO - [♥] Applied 3 patches to 'engine/text.lua'
+INFO - [G] Failed to connect to the debug server
+INFO - [G] 2025-02-15 21:50:56 :: DEBUG :: DebugConsole :: Steamodded Debug Socket started !
+INFO - [♥] Applied 2 patches to 'engine/string_packer.lua'
+INFO - [G] 2025-02-15 21:50:58 :: INFO  :: SpriteAPI :: All the sprites have been loaded!
+INFO - [G] 2025-02-15 21:50:59 :: INFO  :: SpriteAPI :: All the sprites have been loaded!
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: Cosmos.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: coalstocking.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: krampusjoker.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: magi.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: milkandcookies.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: pantomime.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: santajoker.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: snowman.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: snowstorm.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: spinagogue.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: wrappingpaper.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: en-us.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: Achievements.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: Antimatter.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: Blinds.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: Challenges.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: CodeCards.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: CryptidJokerDisplay.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: Decks.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: Enhanced.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: EpicJokers.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: Exotic.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: M.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: Misc.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: MiscJokers.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: Planets.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: Sleeves.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: Spectrals.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: Spooky.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: Stakes.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: Tags.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: Vouchers.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: dummy_https.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: dummy_timerblinds.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: config.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: thread.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: de.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: en-us.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: es_419.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: es_ES.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: fr.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: id.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: ja.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: ko.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: nl.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: pl.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: pt_BR.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: ru.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: zh_CN.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: zh_TW.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: bignumber.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: notations.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: omeganum.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: config.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: nativefs.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: talisman.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: back.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: blind.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: card.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: cardarea.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: game.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: main.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: tag.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: StackTracePlus.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: core.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: deck.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: joker.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: planet.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: r_blind.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: seal.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: sound.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: spectral.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: sprite.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: suit.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: tarot.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: voucher.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: debug.lua
+INFO - [G] 2025-02-15 21:50:59 :: TRACE :: Loader :: Skipping non-Lua file or invalid header: loader.lua
+INFO - [G] 2025-02-15 21:50:59 :: INFO  :: Loader :: 1: 
+  path: C:/Users/Grayson/AppData/Roaming/Balatro/Mods/
+  author: 
+    1: Chamels and UnknownEternity
+  priority: 0
+  id: AceInTheHole
+  badge_colour: 
+    1: 0.4
+    2: 0.4
+    3: 0.4
+    4: 1
+  display_name: Ace in the Hole
+  name: Ace in the Hole
+  description: Create a special deck that only contains one Ace of each suit!
+2: 
+  path: C:/Users/Grayson/AppData/Roaming/Balatro/Mods/
+  author: 
+    1: itiseren
+  priority: 0
+  id: DeckOf8
+  badge_colour: 
+    1: 0.4
+    2: 0.4
+    3: 0.4
+    4: 1
+  display_name: Deck of 8
+  name: Deck of 8
+  description: Create a special deck that only contains 8s!
+3: 
+  path: C:/Users/Grayson/AppData/Roaming/Balatro/Mods/SylvieSilly-0.1.1/
+  author: 
+    1: NewtTheFish
+  priority: 0
+  id: SylvieSilly
+  badge_colour: 
+    1: 0.78039215686275
+    2: 0.21960784313725
+    3: 0.49019607843137
+    4: 1
+  display_name: Sylvie Sillies
+  name: Sylvie's Silliness
+  description: A few decks, blinds, etc. Have fun!
+4: 
+  path: C:/Users/Grayson/AppData/Roaming/Balatro/Mods/Talisman/
+  author: 
+    1: MathIsFun_
+    2: Mathguy24
+    3: jenwalter666
+    4: cg-223
+  priority: 0
+  id: Talisman
+  badge_colour: 
+    1: 0.4
+    2: 0.4
+    3: 0.4
+    4: 1
+  display_name: Talisman
+  name: Talisman
+  description: A mod that increases Balatro's score limit and skips scoring animations.
+
+INFO - [G] 2025-02-15 21:50:59 :: INFO  :: DefaultLogger :: Launch Init Function for: SylvieSilly.
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_backs
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_suit_normal_1
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_moons
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_suit_normal_1
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_vouchers
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_suit_normal_1
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_blinds
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_suit_normal_1
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_spectrals
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_suit_normal_1
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_boosters
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_suit_normal_1
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: The Booster named Suits Pack with the slug p_suit_normal_1 have been registered at the id 34.
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_backs
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_suit_normal_2
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_moons
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_suit_normal_2
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_vouchers
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_suit_normal_2
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_blinds
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_suit_normal_2
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_spectrals
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_suit_normal_2
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_boosters
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_suit_normal_2
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: The Booster named Suits Pack with the slug p_suit_normal_2 have been registered at the id 35.
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_backs
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_suit_jumbo
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_moons
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_suit_jumbo
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_vouchers
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_suit_jumbo
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_blinds
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_suit_jumbo
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_spectrals
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_suit_jumbo
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_boosters
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_suit_jumbo
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: The Booster named Jumbo Suits Pack with the slug p_suit_jumbo have been registered at the id 36.
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_backs
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_suit_mega
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_moons
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_suit_mega
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_vouchers
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_suit_mega
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_blinds
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_suit_mega
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_spectrals
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_suit_mega
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_boosters
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_suit_mega
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: The Booster named Mega Suits Pack with the slug p_suit_mega have been registered at the id 37.
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_backs
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_bonus_normal
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_moons
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_bonus_normal
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_vouchers
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_bonus_normal
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_blinds
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_bonus_normal
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_spectrals
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_bonus_normal
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_boosters
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_bonus_normal
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: The Booster named Bonus Pack with the slug p_bonus_normal have been registered at the id 38.
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_backs
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_bonus_jumbo
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_moons
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_bonus_jumbo
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_vouchers
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_bonus_jumbo
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_blinds
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_bonus_jumbo
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_spectrals
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_bonus_jumbo
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_boosters
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_bonus_jumbo
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: The Booster named Jumbo Bonus Pack with the slug p_bonus_jumbo have been registered at the id 39.
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_backs
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_fortune_normal
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_moons
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_fortune_normal
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_vouchers
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_fortune_normal
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_blinds
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_fortune_normal
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_spectrals
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_fortune_normal
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_boosters
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_fortune_normal
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: The Booster named Fortune Pack with the slug p_fortune_normal have been registered at the id 40.
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_backs
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_fortune_jumbo
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_moons
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_fortune_jumbo
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_vouchers
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_fortune_jumbo
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_blinds
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_fortune_jumbo
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_spectrals
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_fortune_jumbo
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: sylvie_boosters
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: p_fortune_jumbo
+INFO - [G] 2025-02-15 21:50:59 :: DEBUG :: DefaultLogger :: The Booster named Jumbo Fortune Pack with the slug p_fortune_jumbo have been registered at the id 41.
+INFO - [G] 2025-02-15 21:50:59 :: INFO  :: SpriteAPI :: Registered Sprite sylvie_backs with path sylvie_backs.png.
+INFO - [G] 2025-02-15 21:50:59 :: INFO  :: SpriteAPI :: Registered Sprite sylvie_moons with path sylvie_moons.png.
+INFO - [G] 2025-02-15 21:50:59 :: INFO  :: SpriteAPI :: Registered Sprite sylvie_vouchers with path sylvie_vouchers.png.
+INFO - [G] 2025-02-15 21:50:59 :: INFO  :: SpriteAPI :: Registered Sprite sylvie_blinds with path sylvie_blinds.png.
+INFO - [G] 2025-02-15 21:50:59 :: INFO  :: SpriteAPI :: Registered Sprite sylvie_spectrals with path sylvie_spectrals.png.
+INFO - [G] 2025-02-15 21:50:59 :: INFO  :: SpriteAPI :: Registered Sprite sylvie_boosters with path sylvie_boosters.png.
+INFO - [G] 2025-02-15 21:51:00 :: INFO  :: SpriteAPI :: All the sprites have been loaded!
+INFO - [G] 2025-02-15 21:51:00 :: INFO  :: DeckAPI :: Registered Deck Ace_in_the_Hole with the slug b_aces at ID 17.
+INFO - [G] 2025-02-15 21:51:00 :: INFO  :: DeckAPI :: Registered Deck Deck of 8s with the slug b_8s at ID 18.
+INFO - [G] 2025-02-15 21:51:00 :: INFO  :: DeckAPI :: Registered Deck Lemon-Lime Deck with the slug b_ss_lemonlime at ID 19.
+INFO - [G] 2025-02-15 21:51:00 :: INFO  :: DeckAPI :: Registered Deck Aurora Deck with the slug b_ss_aurora at ID 20.
+INFO - [G] 2025-02-15 21:51:00 :: INFO  :: DeckAPI :: Registered Deck Sulfur Deck with the slug b_ss_sulfur at ID 21.
+INFO - [G] 2025-02-15 21:51:00 :: INFO  :: DeckAPI :: Registered Deck Hallowed Deck with the slug b_ss_hallowed at ID 22.
+INFO - [G] 2025-02-15 21:51:00 :: INFO  :: ConsumableAPI :: Registered Planet Europa with the slug c_sylvie_europa at ID 14.
+INFO - [G] 2025-02-15 21:51:00 :: INFO  :: ConsumableAPI :: Registered Planet Io with the slug c_sylvie_io at ID 15.
+INFO - [G] 2025-02-15 21:51:00 :: INFO  :: ConsumableAPI :: Registered Planet Callisto with the slug c_sylvie_callisto at ID 16.
+INFO - [G] 2025-02-15 21:51:00 :: INFO  :: ConsumableAPI :: Registered Planet Ganymede with the slug c_sylvie_ganymede at ID 17.
+INFO - [G] 2025-02-15 21:51:00 :: INFO  :: ConsumableAPI :: Registered Planet Charon with the slug c_sylvie_charon at ID 18.
+INFO - [G] 2025-02-15 21:51:00 :: INFO  :: ConsumableAPI :: Registered Planet Hydra with the slug c_sylvie_hydra at ID 19.
+INFO - [G] 2025-02-15 21:51:00 :: INFO  :: ConsumableAPI :: Registered Planet Titan with the slug c_sylvie_titan at ID 20.
+INFO - [G] 2025-02-15 21:51:00 :: INFO  :: ConsumableAPI :: Registered Planet Euceladus with the slug c_sylvie_euceladus at ID 21.
+INFO - [G] 2025-02-15 21:51:00 :: INFO  :: ConsumableAPI :: Registered Spectral Bloom with the slug c_bloom at ID 20.
+INFO - [G] 2025-02-15 21:51:00 :: INFO  :: VoucherAPI :: Registered Voucher Stamper with the slug v_stamper at ID 34.
+INFO - [G] 2025-02-15 21:51:00 :: INFO  :: VoucherAPI :: Registered Voucher SealDeal with the slug v_seal_deal at ID 35.
+INFO - [G] 2025-02-15 21:51:00 :: INFO  :: BlindAPI :: Registered Blind The Prospector with the slug bl_prospector at ID 32.
+INFO - [G] 2025-02-15 21:51:00 :: INFO  :: BlindAPI :: Registered Blind The Gambler with the slug bl_gambler at ID 33.
+INFO - [G] 2025-02-15 21:51:00 :: INFO  :: BlindAPI :: Registered Blind The Pathway with the slug bl_pathway at ID 34.
+INFO - [G] 2025-02-15 21:51:00 :: INFO  :: BlindAPI :: Registered Blind The Backside with the slug bl_backside at ID 35.
+INFO - [G] 2025-02-15 21:51:00 :: INFO  :: BlindAPI :: Registered Blind The Heatwave with the slug bl_heatwave at ID 36.
+INFO - [G] 2025-02-15 21:51:00 :: INFO  :: BlindAPI :: Registered Blind The Frost with the slug bl_frost at ID 37.

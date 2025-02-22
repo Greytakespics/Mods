@@ -1,0 +1,78 @@
+[13Feb2025 20:19:05.726] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeserver, --fml.forgeVersion, 47.3.29, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412]
+[13Feb2025 20:19:05.731] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.2 by Oracle Corporation; OS Windows 10 arch amd64 version 10.0
+[13Feb2025 20:19:06.105] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgeserver
+[13Feb2025 20:19:06.154] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/Grayson/Desktop/MC%20Server%20Hosting/Hosting/MC%20Server/libraries/org/spongepowered/mixin/0.8.5/mixin-0.8.5.jar%2365!/ Service=ModLauncher Env=SERVER
+[13Feb2025 20:19:06.486] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Grayson\Desktop\MC Server Hosting\Hosting\MC Server\libraries\net\minecraftforge\fmlcore\1.20.1-47.3.29\fmlcore-1.20.1-47.3.29.jar is missing mods.toml file
+[13Feb2025 20:19:06.490] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Grayson\Desktop\MC Server Hosting\Hosting\MC Server\libraries\net\minecraftforge\javafmllanguage\1.20.1-47.3.29\javafmllanguage-1.20.1-47.3.29.jar is missing mods.toml file
+[13Feb2025 20:19:06.495] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Grayson\Desktop\MC Server Hosting\Hosting\MC Server\libraries\net\minecraftforge\lowcodelanguage\1.20.1-47.3.29\lowcodelanguage-1.20.1-47.3.29.jar is missing mods.toml file
+[13Feb2025 20:19:06.500] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Grayson\Desktop\MC Server Hosting\Hosting\MC Server\libraries\net\minecraftforge\mclanguage\1.20.1-47.3.29\mclanguage-1.20.1-47.3.29.jar is missing mods.toml file
+[13Feb2025 20:19:06.622] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 3 dependencies adding them to mods collection
+[13Feb2025 20:19:07.936] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[13Feb2025 20:19:07.964] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeserver' with arguments []
+[13Feb2025 20:19:13.591] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.3.29, for MC 1.20.1 with MCP 20230612.114412
+[13Feb2025 20:19:13.592] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.3.29 Initialized
+[13Feb2025 20:19:16.108] [modloading-worker-0/INFO] [com.jaquadro.minecraft.storagedrawers.StorageDrawers/]: New compacting rule 4 clay_ball = 1 clay
+[13Feb2025 20:19:16.109] [modloading-worker-0/INFO] [com.jaquadro.minecraft.storagedrawers.StorageDrawers/]: New compacting rule 4 snowball = 1 snow_block
+[13Feb2025 20:19:16.109] [modloading-worker-0/INFO] [com.jaquadro.minecraft.storagedrawers.StorageDrawers/]: New compacting rule 4 glowstone_dust = 1 glowstone
+[13Feb2025 20:19:16.109] [modloading-worker-0/INFO] [com.jaquadro.minecraft.storagedrawers.StorageDrawers/]: New compacting rule 4 brick = 1 bricks
+[13Feb2025 20:19:16.110] [modloading-worker-0/INFO] [com.jaquadro.minecraft.storagedrawers.StorageDrawers/]: New compacting rule 4 nether_brick = 1 nether_bricks
+[13Feb2025 20:19:16.110] [modloading-worker-0/INFO] [com.jaquadro.minecraft.storagedrawers.StorageDrawers/]: New compacting rule 9 nether_wart = 1 nether_wart_block
+[13Feb2025 20:19:16.111] [modloading-worker-0/INFO] [com.jaquadro.minecraft.storagedrawers.StorageDrawers/]: New compacting rule 4 quartz = 1 quartz_block
+[13Feb2025 20:19:16.111] [modloading-worker-0/INFO] [com.jaquadro.minecraft.storagedrawers.StorageDrawers/]: New compacting rule 9 melon_slice = 1 melon
+[13Feb2025 20:19:16.112] [modloading-worker-0/INFO] [com.jaquadro.minecraft.storagedrawers.StorageDrawers/]: New compacting rule 4 sand = 1 sandstone
+[13Feb2025 20:19:16.112] [modloading-worker-0/INFO] [com.jaquadro.minecraft.storagedrawers.StorageDrawers/]: New compacting rule 4 red_sand = 1 red_sandstone
+[13Feb2025 20:19:16.146] [modloading-worker-0/INFO] [com.jaquadro.minecraft.storagedrawers.StorageDrawers/]: New compacting rule 4 clay_ball = 1 clay
+[13Feb2025 20:19:16.152] [main/INFO] [terrablender/]: Registered region minecraft:overworld to index 0 for type OVERWORLD
+[13Feb2025 20:19:16.153] [main/INFO] [terrablender/]: Registered region minecraft:nether to index 0 for type NETHER
+[13Feb2025 20:19:16.153] [main/INFO] [terrablender/]: Registered region biomesoplenty:overworld_primary to index 1 for type OVERWORLD
+[13Feb2025 20:19:16.154] [main/INFO] [terrablender/]: Registered region biomesoplenty:overworld_secondary to index 2 for type OVERWORLD
+[13Feb2025 20:19:16.154] [main/INFO] [terrablender/]: Registered region biomesoplenty:overworld_rare to index 3 for type OVERWORLD
+[13Feb2025 20:19:16.155] [main/INFO] [terrablender/]: Registered region biomesoplenty:nether_common to index 1 for type NETHER
+[13Feb2025 20:19:16.155] [main/INFO] [terrablender/]: Registered region biomesoplenty:nether_rare to index 2 for type NETHER
+[13Feb2025 20:19:16.260] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[13Feb2025 20:19:16.676] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: AHEAD Current: 47.3.29 Target: null
+[13Feb2025 20:19:16.676] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [flywheel] Starting version check at https://api.modrinth.com/updates/flywheel/forge_updates.json
+[13Feb2025 20:19:16.817] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [flywheel] Found status: BETA Current: 0.6.11-13 Target: null
+[13Feb2025 20:19:18.521] [main/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[13Feb2025 20:19:19.985] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Grayson/Desktop/MC%20Server%20Hosting/Hosting/MC%20Server/libraries/net/minecraft/server/1.20.1-20230612.114412/server-1.20.1-20230612.114412-srg.jar%23127!/assets/.mcassetsroot' uses unexpected schema
+[13Feb2025 20:19:19.986] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Grayson/Desktop/MC%20Server%20Hosting/Hosting/MC%20Server/libraries/net/minecraft/server/1.20.1-20230612.114412/server-1.20.1-20230612.114412-srg.jar%23127!/data/.mcassetsroot' uses unexpected schema
+[13Feb2025 20:19:21.476] [main/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 23 recipes
+[13Feb2025 20:19:21.580] [main/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 2679 advancements
+[13Feb2025 20:19:23.310] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Starting minecraft server version 1.20.1
+[13Feb2025 20:19:23.310] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Loading properties
+[13Feb2025 20:19:23.312] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Default game type: SURVIVAL
+[13Feb2025 20:19:23.314] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[13Feb2025 20:19:23.358] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Starting Minecraft server on *:25565
+[13Feb2025 20:19:23.371] [Server thread/INFO] [net.minecraft.server.network.ServerConnectionListener/]: Using default channel type
+[13Feb2025 20:19:23.566] [Server thread/INFO] [terrablender/]: Initialized TerraBlender biomes for level stem minecraft:the_nether
+[13Feb2025 20:19:23.949] [Server thread/INFO] [terrablender/]: Initialized TerraBlender biomes for level stem minecraft:overworld
+[13Feb2025 20:19:23.949] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Preparing level "world"
+[13Feb2025 20:19:25.720] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[13Feb2025 20:19:28.318] [Worker-Main-10/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[13Feb2025 20:19:28.319] [Worker-Main-14/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[13Feb2025 20:19:28.321] [Worker-Main-14/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[13Feb2025 20:19:28.322] [Worker-Main-14/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[13Feb2025 20:19:28.322] [Worker-Main-14/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[13Feb2025 20:19:28.323] [Worker-Main-14/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[13Feb2025 20:19:28.722] [Worker-Main-9/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 15%
+[13Feb2025 20:19:29.222] [Worker-Main-6/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 94%
+[13Feb2025 20:19:29.251] [Server thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 3530 ms
+[13Feb2025 20:19:29.251] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Done (5.741s)! For help, type "help"
+[13Feb2025 20:19:29.282] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[13Feb2025 20:20:13.350] [User Authenticator #1/INFO] [net.minecraft.server.network.ServerLoginPacketListenerImpl/]: UUID of player GrayDunk is 93dd158a-f87b-46d4-a53e-a9825595f508
+[13Feb2025 20:20:15.770] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: GrayDunk[/10.189.150.30:60881] logged in with entity id 268 at (10.5, 85.0, -9.5)
+[13Feb2025 20:20:15.868] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: GrayDunk joined the game
+[13Feb2025 20:22:01.843] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Incorrect argument for command
+[13Feb2025 20:22:01.843] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: whitelist bigboypoopi<--[HERE]
+[13Feb2025 20:22:22.493] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Incorrect argument for command
+[13Feb2025 20:22:22.494] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: whitelist bigboipoopy<--[HERE]
+[13Feb2025 20:28:00.334] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[13Feb2025 20:28:00.336] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[13Feb2025 20:28:00.344] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[13Feb2025 20:28:00.850] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[13Feb2025 20:28:01.185] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_nether
+[13Feb2025 20:28:01.187] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_end
+[13Feb2025 20:28:01.208] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[13Feb2025 20:28:01.209] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[13Feb2025 20:28:01.209] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[13Feb2025 20:28:01.209] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved

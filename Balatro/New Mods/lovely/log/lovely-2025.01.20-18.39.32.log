@@ -1,0 +1,245 @@
+INFO - [♥] Lovely 0.6.0
+INFO - [♥] Game directory is at "X:\\SteamLibrary\\steamapps\\common\\Balatro"
+INFO - [♥] Writing logs to "C:\\Users\\Grayson\\AppData\\Roaming\\Balatro\\Mods\\lovely\\log"
+INFO - [♥] Using mod directory at "C:\\Users\\Grayson\\AppData\\Roaming\\Balatro\\Mods"
+WARN - [♥] Unknown key `patches.46.?.match_indent` found in patch file at "C:\\Users\\Grayson\\AppData\\Roaming\\Balatro\\Mods\\smods-main\\lovely\\fixes.toml", ignoring it
+WARN - [♥] Unknown key `patches.3.?.match_indent` found in patch file at "C:\\Users\\Grayson\\AppData\\Roaming\\Balatro\\Mods\\smods-main\\lovely\\rarity.toml", ignoring it
+INFO - [♥] Initialization complete in 1156ms
+WARN - [♥] Pattern 'G.ARGS.score_intensity.organ = G.video_organ or G.ARGS.score_intensity.required_score > 0 and math.max(math.min(0.4, 0.1*math.log(G.ARGS.score_intensity.earned_score/(G.ARGS.score_intensity.required_score+1), 5)),0.) or 0' on target 'main.lua' resulted in no matches
+WARN - [♥] Pattern 'if type(G.GAME.current_round.current_hand.chips) ~= \'number\' or type(G.GAME.current_round.current_hand.mult) ~= \'number\' then' on target 'main.lua' resulted in no matches
+INFO - [♥] Applied 15 patches to 'main.lua'
+INFO - [♥] Applied 2 patches to 'engine/string_packer.lua'
+INFO - [♥] Applied 6 patches to 'engine/controller.lua'
+INFO - [♥] Applied 13 patches to 'back.lua'
+INFO - [♥] Applied 15 patches to 'tag.lua'
+INFO - [♥] Applied 2 patches to 'engine/moveable.lua'
+INFO - [♥] Applied 2 patches to 'engine/sprite.lua'
+INFO - [♥] Applied 2 patches to 'engine/animatedsprite.lua'
+WARN - [♥] Pattern 'assembled_string = assembled_string..(type(subpart) == \'string\' and subpart or args.vars[tonumber(subpart[1])] or \'ERROR\')' on target 'functions/misc_functions.lua' resulted in no matches
+INFO - [♥] Applied 47 patches to 'functions/misc_functions.lua'
+INFO - [♥] Applied 73 patches to 'game.lua'
+INFO - [♥] Applied 1 patch to 'globals.lua'
+INFO - [♥] Applied 6 patches to 'engine/ui.lua'
+WARN - [♥] Pattern '{card_limit = _size, type = \'consumeable\', highlight_limit = 1}' on target 'functions/UI_definitions.lua' resulted in no matches
+WARN - [♥] Pattern '{n=G.UIT.T, config={text = G.GAME.hands[handname].chips, scale = 0.45, colour = G.C.UI.TEXT_LIGHT}},' on target 'functions/UI_definitions.lua' resulted in no matches
+WARN - [♥] Pattern '{n=G.UIT.T, config={text = G.GAME.hands[handname].mult, scale = 0.45, colour = G.C.UI.TEXT_LIGHT}}' on target 'functions/UI_definitions.lua' resulted in no matches
+INFO - [♥] Applied 86 patches to 'functions/UI_definitions.lua'
+WARN - [♥] Pattern 'ease_to = G.GAME.chips + math.floor(hand_chips * mult) * (e and e.antiscore and -1 or 1),' on target 'functions/state_events.lua' resulted in no matches
+WARN - [♥] Pattern 'if cards_destroyed[i].ability.name == \'Glass Card\' then' on target 'functions/state_events.lua' resulted in no matches
+WARN - [♥] Pattern 'local hand_space = e or math.min(#G.deck.cards, G.hand.config.card_limit - #G.hand.cards)' on target 'functions/state_events.lua' resulted in no matches
+WARN - [♥] Pattern 'local effects = {G.hand.cards[i]:get_end_of_round_effect()}' on target 'functions/state_events.lua' resulted in no matches
+WARN - [♥] Pattern '--calculate the card edition effects\nif effects[ii].edition then\n    hand_chips = mod_chips(hand_chips + (effects[ii].edition.chip_mod or 0))\n    mult = mult + (effects[ii].edition.mult_mod or 0)\n    mult = mod_mult(mult*(effects[ii].edition.x_mult_mod or 1))\n    update_hand_text({delay = 0}, {\n        chips = effects[ii].edition.chip_mod and hand_chips or nil,\n        mult = (effects[ii].edition.mult_mod or effects[ii].edition.x_mult_mod) and mult or nil,\n    })\n    card_eval_status_text(scoring_hand[i], \'extra\', nil, percent, nil, {\n        message = (effects[ii].edition.chip_mod and localize{type=\'variable\',key=\'a_chips\',vars={effects[ii].edition.chip_mod}}) or\n                (effects[ii].edition.mult_mod and localize{type=\'variable\',key=\'a_mult\',vars={effects[ii].edition.mult_mod}}) or\n                (effects[ii].edition.x_mult_mod and localize{type=\'variable\',key=\'a_xmult\',vars={effects[ii].edition.x_mult_mod}}),\n        chip_mod =  effects[ii].edition.chip_mod,\n        mult_mod =  effects[ii].edition.mult_mod,\n        x_mult_mod =  effects[ii].edition.x_mult_mod,\n        colour = G.C.DARK_EDITION,\n        edition = true})\nend\n' on target 'functions/state_events.lua' resulted in no matches
+WARN - [♥] Pattern '    scoring_hand[i].lucky_trigger = nil\n\n        for ii = 1, #effects do\n        --If chips added, do chip add event and add the chips to the total\n        if effects[ii].chips then \n            if effects[ii].card then juice_card(effects[ii].card) end\n            hand_chips = mod_chips(hand_chips + effects[ii].chips)\n            update_hand_text({delay = 0}, {chips = hand_chips})\n            card_eval_status_text(scoring_hand[i], \'chips\', effects[ii].chips, percent)\n        end\n\n        --If mult added, do mult add event and add the mult to the total\n        if effects[ii].mult then \n            if effects[ii].card then juice_card(effects[ii].card) end\n            mult = mod_mult(mult + effects[ii].mult)\n            update_hand_text({delay = 0}, {mult = mult})\n            card_eval_status_text(scoring_hand[i], \'mult\', effects[ii].mult, percent)\n        end\n\n        --If play dollars added, add dollars to total\n        if effects[ii].p_dollars then \n            if effects[ii].card then juice_card(effects[ii].card) end\n            ease_dollars(effects[ii].p_dollars)\n            card_eval_status_text(scoring_hand[i], \'dollars\', effects[ii].p_dollars, percent)\n        end\n\n        --If dollars added, add dollars to total\n        if effects[ii].dollars then \n            if effects[ii].card then juice_card(effects[ii].card) end\n            ease_dollars(effects[ii].dollars)\n            card_eval_status_text(scoring_hand[i], \'dollars\', effects[ii].dollars, percent)\n        end\n\n        --Any extra effects\n        if effects[ii].extra then \n            if effects[ii].card then juice_card(effects[ii].card) end\n            local extras = {mult = false, hand_chips = false}\n            if effects[ii].extra.mult_mod then mult =mod_mult( mult + effects[ii].extra.mult_mod);extras.mult = true end\n            if effects[ii].extra.chip_mod then hand_chips = mod_chips(hand_chips + effects[ii].extra.chip_mod);extras.hand_chips = true end\n            if effects[ii].extra.swap then \n                local old_mult = mult\n                mult = mod_mult(hand_chips)\n                hand_chips = mod_chips(old_mult)\n                extras.hand_chips = true; extras.mult = true\n            end\n            if effects[ii].extra.func then effects[ii].extra.func() end\n            update_hand_text({delay = 0}, {chips = extras.hand_chips and hand_chips, mult = extras.mult and mult})\n            card_eval_status_text(scoring_hand[i], \'extra\', nil, percent, nil, effects[ii].extra)\n        end\n\n        --If x_mult added, do mult add event and mult the mult to the total\n        if effects[ii].x_mult then \n            if effects[ii].card then juice_card(effects[ii].card) end\n            mult = mod_mult(mult*effects[ii].x_mult)\n            update_hand_text({delay = 0}, {mult = mult})\n            card_eval_status_text(scoring_hand[i], \'x_mult\', effects[ii].x_mult, percent)\n        end\n\n\n        end\n    end\nend\n' on target 'functions/state_events.lua' resulted in no matches
+WARN - [♥] Pattern '--calculate the joker edition effects\nlocal edition_effects = eval_card(_card, {cardarea = G.jokers, full_hand = G.play.cards, scoring_hand = scoring_hand, scoring_name = text, poker_hands = poker_hands, edition = true})\nif edition_effects.jokers then\n    edition_effects.jokers.edition = true\n    if edition_effects.jokers.chip_mod then\n        hand_chips = mod_chips(hand_chips + edition_effects.jokers.chip_mod)\n        update_hand_text({delay = 0}, {chips = hand_chips})\n        card_eval_status_text(_card, \'jokers\', nil, percent, nil, {\n            message = localize{type=\'variable\',key=\'a_chips\',vars={edition_effects.jokers.chip_mod}},\n            chip_mod =  edition_effects.jokers.chip_mod,\n            colour =  G.C.EDITION,\n            edition = true})\n    end\n    if edition_effects.jokers.mult_mod then\n        mult = mod_mult(mult + edition_effects.jokers.mult_mod)\n        update_hand_text({delay = 0}, {mult = mult})\n        card_eval_status_text(_card, \'jokers\', nil, percent, nil, {\n            message = localize{type=\'variable\',key=\'a_mult\',vars={edition_effects.jokers.mult_mod}},\n            mult_mod =  edition_effects.jokers.mult_mod,\n            colour = G.C.DARK_EDITION,\n            edition = true})\n    end\n    percent = percent+percent_delta\nend' on target 'functions/state_events.lua' resulted in no matches
+WARN - [♥] Pattern 'if edition_effects.jokers then\n    if edition_effects.jokers.x_mult_mod then\n        mult = mod_mult(mult*edition_effects.jokers.x_mult_mod)\n        update_hand_text({delay = 0}, {mult = mult})\n        card_eval_status_text(_card, \'jokers\', nil, percent, nil, {\n            message = localize{type=\'variable\',key=\'a_xmult\',vars={edition_effects.jokers.x_mult_mod}},\n            x_mult_mod =  edition_effects.jokers.x_mult_mod,\n            colour =  G.C.EDITION,\n            edition = true})\n    end\n    percent = percent+percent_delta\nend' on target 'functions/state_events.lua' resulted in no matches
+WARN - [♥] Pattern '            --calculate the joker effects\n            local effects = eval_card(_card, {cardarea = G.jokers, full_hand = G.play.cards, scoring_hand = scoring_hand, scoring_name = text, poker_hands = poker_hands, joker_main = true})\n\n            --Any Joker effects\n            if effects.jokers then \n                local extras = {mult = false, hand_chips = false}\n                if effects.jokers.mult_mod then mult = mod_mult(mult + effects.jokers.mult_mod);extras.mult = true end\n                if effects.jokers.chip_mod then hand_chips = mod_chips(hand_chips + effects.jokers.chip_mod);extras.hand_chips = true end\n                if effects.jokers.Xmult_mod then mult = mod_mult(mult*effects.jokers.Xmult_mod);extras.mult = true  end\n                update_hand_text({delay = 0}, {chips = extras.hand_chips and hand_chips, mult = extras.mult and mult})\n                card_eval_status_text(_card, \'jokers\', nil, percent, nil, effects.jokers)\n                percent = percent+percent_delta\n            end' on target 'functions/state_events.lua' resulted in no matches
+WARN - [♥] Pattern '--Joker on Joker effects\nfor _, v in ipairs(G.jokers.cards) do\n    local effect = v:calculate_joker{full_hand = G.play.cards, scoring_hand = scoring_hand, scoring_name = text, poker_hands = poker_hands, other_joker = _card}\n    if effect then\n        local extras = {mult = false, hand_chips = false}\n        if effect.mult_mod then mult = mod_mult(mult + effect.mult_mod);extras.mult = true end\n        if effect.chip_mod then hand_chips = mod_chips(hand_chips + effect.chip_mod);extras.hand_chips = true end\n        if effect.Xmult_mod then mult = mod_mult(mult*effect.Xmult_mod);extras.mult = true  end\n        if extras.mult or extras.hand_chips then update_hand_text({delay = 0}, {chips = extras.hand_chips and hand_chips, mult = extras.mult and mult}) end\n        if extras.mult or extras.hand_chips then card_eval_status_text(v, \'jokers\', nil, percent, nil, effect) end\n        percent = percent+percent_delta\n    end\nend' on target 'functions/state_events.lua' resulted in no matches
+WARN - [♥] Pattern 'for j = 1, #G.jokers.cards do\n    destroyed = G.jokers.cards[j]:calculate_joker({destroying_card = scoring_hand[i], full_hand = G.play.cards})\n    if destroyed then break end\nend\n\nif scoring_hand[i].ability.name == \'Glass Card\' and not scoring_hand[i].debuff and pseudorandom(\'glass\') < G.GAME.probabilities.normal/scoring_hand[i].ability.extra then \n    destroyed = true\nend' on target 'functions/state_events.lua' resulted in no matches
+WARN - [♥] Pattern 'local percent = (i-0.999)/(#G.hand.cards-0.998) + (j-1)*0.1' on target 'functions/state_events.lua' resulted in no matches
+WARN - [♥] Pattern 'if effects[ii].card then' on target 'functions/state_events.lua' resulted in no matches
+WARN - [♥] Pattern 'if effects[ii].message then' on target 'functions/state_events.lua' resulted in no matches
+WARN - [♥] Pattern '--calculate the card edition effects' on target 'functions/state_events.lua' resulted in no matches
+WARN - [♥] Pattern 'if effects[ii].edition.p_dollars_mod then' on target 'functions/state_events.lua' resulted in no matches
+WARN - [♥] Regex '(?<indent>[\\t ]*)if destroyed then \\n' on target 'functions/state_events.lua' resulted in no matches
+INFO - [♥] Applied 75 patches to 'functions/state_events.lua'
+WARN - [♥] Regex '(?<indent>[\\t ]*)if G\\.F_NO_ACHIEVEMENTS then return end\\n[\\s\\S][\\s\\S]{16}--\\|LOCAL SETTINGS FILE' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'function generate_card_ui(_c, full_UI_table, specific_vars, card_type, badges, hide_desc, main_start, main_end)' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern '{n=G.UIT.T, config={text = localize(\'$\')..config.dollars, scale = 1.2*scale, colour = G.C.WHITE, shadow = true, juice = true}}' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'elseif _c.name == \'Cryptid\' then loc_vars = {_c.config.extra}' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'elseif _c.name == \"Clearance Sale\" or _c.name == \"Liquidation\" then loc_vars = {_c.config.extra}' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'elseif v.boss.showdown and (G.GAME.round_resets.ante)%G.GAME.win_ante == 0 and G.GAME.round_resets.ante >= 2 then' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'if v == \'negative_consumable\' then info_queue[#info_queue+1] = {key = \'e_negative_consumable\', set = \'Edition\', config = {extra = 1}} end' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'func = (function() if eval_func(card) then if not first or first then card:juice_up(0.1, 0.1) end;juice_card_until(card, eval_func, nil, 0.8) end return true end)' on target 'functions/common_events.lua' resulted in no matches
+INFO - [♥] Applied 134 patches to 'functions/common_events.lua'
+WARN - [♥] Pattern 'G.pack_cards:emplace(v)' on target 'functions/button_callbacks.lua' resulted in no matches
+INFO - [♥] Applied 52 patches to 'functions/button_callbacks.lua'
+WARN - [♥] Pattern 'if k ~= \'focused_ui\' and k ~= \"front\" and k ~= \"back\" and k ~= \"soul_parts\" and k ~= \"center\" and k ~= \'floating_sprite\' and k~= \"shadow\" and k~= \"use_button\" and k ~= \'buy_button\' and k ~= \'buy_and_use_button\' and k~= \"debuff\" and k ~= \'price\' and k~= \'particles\' and k ~= \'h_popup\' then v:draw() end' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'if center_table.name == \'Overstock\' or center_table.name == \'Overstock Plus\' then' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'if self.ability.name == \'Campfire\' and G.GAME.blind.boss and not (G.GAME.blind.config and G.GAME.blind.config.bonus) and self.ability.x_mult > 1 then' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'if self.ability.name:find(\'Arcana\') then' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'if center_table.name == \'Overstock\' or center_table.name == \'Overstock Plus\' then' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'if self.ability.name == \'The Hermit\' or self.ability.consumeable.hand_type or self.ability.name == \'Temperance\' or self.ability.name == \'Black Hole\' then' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'if self.ability.queue_negative_removal then' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'if G.GAME.blind then G.E_MANAGER:add_event(Event({ func = function() G.GAME.blind:set_blind(nil, true, nil); return true end })) end' on target 'card.lua' resulted in no matches
+INFO - [♥] Applied 218 patches to 'card.lua'
+WARN - [♥] Pattern 'table.sort(self.cards, function (a, b) return a.T.x + a.T.w/2 - 100*(a.pinned and a.sort_id or 0) < b.T.x + b.T.w/2 - 100*(b.pinned and b.sort_id or 0) end)' on target 'cardarea.lua' resulted in no matches
+INFO - [♥] Applied 14 patches to 'cardarea.lua'
+INFO - [♥] Applied 32 patches to 'blind.lua'
+INFO - [♥] Applied 5 patches to 'engine/text.lua'
+INFO - [G] Failed to connect to the debug server
+INFO - [G] 2025-01-20 18:39:39 :: DEBUG :: DebugConsole :: Steamodded Debug Socket started !
+INFO - [♥] Applied 9 patches to 'engine/sound_manager.lua'
+INFO - [♥] Applied 2 patches to 'engine/string_packer.lua'
+INFO - [G] 2025-01-20 18:39:41 :: TRACE :: Loader :: Processing Mod file (Legacy header): Cryptid.lua
+INFO - [G] 2025-01-20 18:39:41 :: TRACE :: Loader :: Saving Mod Info: Cryptid
+INFO - [G] 2025-01-20 18:39:41 :: TRACE :: Loader :: Processing Mod file (Legacy header): steamodded_metadata.lua
+INFO - [G] 2025-01-20 18:39:41 :: TRACE :: Loader :: Saving Mod Info: Talisman
+INFO - [G] Loading file Achievements.lua
+INFO - [G] Loading file Antimatter.lua
+INFO - [G] Loading file Blinds.lua
+INFO - [G] Loading file Challenges.lua
+INFO - [G] Loading file CodeCards.lua
+INFO - [G] Loading file CryptidJokerDisplay.lua
+INFO - [G] Warning: CryptidJokerDisplay.lua has no items
+INFO - [G] Loading file Decks.lua
+INFO - [G] Loading file Enhanced.lua
+INFO - [G] Loading file EpicJokers.lua
+INFO - [G] Loading file Exotic.lua
+INFO - [G] Loading file M.lua
+INFO - [G] Loading file Misc.lua
+INFO - [G] Loading file MiscJokers.lua
+INFO - [G] Loading file Planets.lua
+INFO - [G] Loading file Sleeves.lua
+INFO - [G] Loading file Spectrals.lua
+INFO - [G] Loading file Spooky.lua
+INFO - [G] Loading file Stakes.lua
+INFO - [G] Loading file Tags.lua
+INFO - [G] Loading file Vouchers.lua
+INFO - [G] Loading file dummy_https.lua
+INFO - [G] Loading file dummy_timerblinds.lua
+INFO - [G] Warning: dummy_timerblinds.lua has no items
+INFO - [G] 2025-01-20 18:39:42 :: WARN  :: Atlas :: Detected duplicate register call on object cry_modicon
+INFO - [G] 2025-01-20 18:39:42 :: WARN  :: Atlas :: Detected duplicate register call on object cry_placeholders
+INFO - [G] 2025-01-20 18:39:42 :: WARN  :: Atlas :: Detected duplicate register call on object cry_atlasepic
+INFO - [G] 2025-01-20 18:39:42 :: WARN  :: Atlas :: Detected duplicate register call on object cry_atlasone
+INFO - [G] 2025-01-20 18:39:42 :: WARN  :: Atlas :: Detected duplicate register call on object cry_atlastwo
+INFO - [G] 2025-01-20 18:39:42 :: WARN  :: Atlas :: Detected duplicate register call on object cry_atlasthree
+INFO - [G] 2025-01-20 18:39:42 :: WARN  :: Atlas :: Detected duplicate register call on object cry_atlasspooky
+INFO - [G] 2025-01-20 18:39:42 :: WARN  :: Atlas :: Detected duplicate register call on object cry_atlasexotic
+INFO - [G] 2025-01-20 18:39:42 :: WARN  :: Atlas :: Detected duplicate register call on object cry_atlasnotjokers
+INFO - [G] 2025-01-20 18:39:42 :: WARN  :: Atlas :: Detected duplicate register call on object cry_tag_cry
+INFO - [G] 2025-01-20 18:39:42 :: WARN  :: Atlas :: Detected duplicate register call on object cry_misc
+INFO - [G] 2025-01-20 18:39:42 :: WARN  :: Sticker :: Detected duplicate register call on object perishable
+INFO - [G] 2025-01-20 18:39:42 :: WARN  :: Sticker :: Detected duplicate register call on object pinned
+INFO - [G] 2025-01-20 18:39:42 :: WARN  :: Sticker :: Detected duplicate register call on object eternal
+INFO - [G] 2025-01-20 18:39:42 :: WARN  :: Sticker :: Detected duplicate register call on object rental
+INFO - [G] 2025-01-20 18:39:42 :: INFO  :: TIMER :: [0000] Injected Language in 0.002 ms
+INFO - [G] 2025-01-20 18:39:42 :: INFO  :: TIMER :: [0000] Injected [INTERNAL] in 16.326 ms
+INFO - [G] 2025-01-20 18:39:43 :: INFO  :: TIMER :: [0030] Injected Atlas in 1411.826 ms
+INFO - [G] 2025-01-20 18:39:43 :: INFO  :: TIMER :: [0025] Injected Sound in 265.689 ms
+INFO - [G] 2025-01-20 18:39:43 :: INFO  :: TIMER :: [0032] Injected Stake in 1.017 ms
+INFO - [G] 2025-01-20 18:39:43 :: INFO  :: TIMER :: [0008] Injected Rarity in 0.049 ms
+INFO - [G] 2025-01-20 18:39:43 :: INFO  :: TIMER :: [0007] Injected ObjectType in 0.072 ms
+INFO - [G] 2025-01-20 18:39:43 :: INFO  :: TIMER :: [0391] Injected Center in 2.239 ms
+INFO - [G] 2025-01-20 18:39:43 :: INFO  :: TIMER :: [0011] Injected Undiscovered Sprite in 0.064 ms
+INFO - [G] 2025-01-20 18:39:43 :: INFO  :: TIMER :: [0027] Injected Blind in 0.201 ms
+INFO - [G] 2025-01-20 18:39:43 :: INFO  :: TIMER :: [0006] Injected Seal in 0.621 ms
+INFO - [G] 2025-01-20 18:39:43 :: INFO  :: TIMER :: [0004] Injected Suit in 0.197 ms
+INFO - [G] 2025-01-20 18:39:43 :: INFO  :: TIMER :: [0013] Injected Rank in 0.152 ms
+INFO - [G] 2025-01-20 18:39:43 :: INFO  :: TIMER :: [0016] Injected DeckSkin in 0.050 ms
+INFO - [G] 2025-01-20 18:39:43 :: INFO  :: TIMER :: [0016] Injected PokerHand in 0.099 ms
+INFO - [G] 2025-01-20 18:39:43 :: INFO  :: TIMER :: [0031] Injected Challenge in 0.045 ms
+INFO - [G] 2025-01-20 18:39:43 :: INFO  :: TIMER :: [0028] Injected Tag in 0.089 ms
+INFO - [G] 2025-01-20 18:39:43 :: INFO  :: TIMER :: [0009] Injected Sticker in 0.118 ms
+INFO - [G] 2025-01-20 18:39:44 :: INFO  :: TIMER :: [0009] Injected Shader in 283.711 ms
+INFO - [G] 2025-01-20 18:39:44 :: INFO  :: TIMER :: [0001] Injected Keybind in 0.042 ms
+INFO - [G] 2025-01-20 18:39:44 :: INFO  :: TIMER :: [0020] Injected Achievement in 0.075 ms
+INFO - [G] 2025-01-20 18:39:44 :: INFO  :: TIMER :: [0000] Injected [INTERNAL] in 23.517 ms
+INFO - [G] 2025-01-20 18:39:44 :: INFO  :: TIMER :: [0011] Injected Event in 0.030 ms
+INFO - [G] line not found
+INFO - [G] file not found: main.lua: No such file or directory
+INFO - [G] file not found: main.lua: No such file or directory
+INFO - [G] line not found
+INFO - [G] file not found: main.lua: No such file or directory
+INFO - [G] file not found: main.lua: No such file or directory
+INFO - [G] 2025-01-20 18:43:12 :: ERROR :: StackTrace :: Oops! The game crashed
+[SMODS _ "src/utils.lua"]:1220: bad argument #1 to 'ipairs' (table expected, got nil)
+Stack Traceback
+===============
+(1) Lua local 'handler' at file 'main.lua:612'
+	Local variables:
+	 msg = string: "[SMODS _ \"src/utils.lua\"]:1220: bad argument #1 to 'ipairs' (table expected, got nil)"
+	 (*temporary) = Lua function '?' (defined at line 31 of chunk [SMODS _ "src/logging.lua"])
+	 (*temporary) = string: "Oops! The game crashed\
+"
+(2) LÖVE function at file 'boot.lua:352' (best guess)
+	Local variables:
+	 errhand = Lua function '?' (defined at line 598 of chunk main.lua)
+	 handler = Lua function '?' (defined at line 598 of chunk main.lua)
+(3) global C function 'ipairs'
+(4) Lua field 'calculate_context' at Steamodded file 'src/utils.lua:1220' 
+	Local variables:
+	 context = table: 0x308f9ca8  {ending_shop:true, cardarea:table: 0x308fdbb0, main_eval:true}
+	 return_table = nil
+	 (for index) = number: 1
+	 (for limit) = number: 1
+	 (for step) = number: 1
+	 k = number: 1
+	 _card = table: 0x2bd588a8  {click_offset:table: 0x2bd588d0, static_rotation:false, ambient_tilt:0.2 (more...)}
+	 eval = table: 0x308f9d38  {}
+	 post = nil
+	 effects = table: 0x308f9f50  {1:table: 0x308f9d38}
+(5) Lua upvalue 'gfts' at file 'functions/button_callbacks.lua:2503'
+	Local variables:
+	 e = table: 0x2bf63b10  {pixellated_rect:table: 0x3565ba40, click_offset:table: 0x2be47838, children:table: 0x2b5963b8 (more...)}
+(6) Lua function '?' at file 'Items/CodeCards.lua:4053' (from mod with id Cryptid) (best guess)
+	Local variables:
+	 e = table: 0x2bf63b10  {pixellated_rect:table: 0x3565ba40, click_offset:table: 0x2be47838, children:table: 0x2b5963b8 (more...)}
+(7) Lua method 'click' at file 'engine/ui.lua:988'
+	Local variables:
+	 self = table: 0x2bf63b10  {pixellated_rect:table: 0x3565ba40, click_offset:table: 0x2be47838, children:table: 0x2b5963b8 (more...)}
+(8) Lua method 'update' at file 'engine/controller.lua:375'
+	Local variables:
+	 self = table: 0x2b91b150  {held_button_times:table: 0x2b91ba20, focus_cursor_stack_level:1, snap_cursor_to:table: 0x2cd558e8 (more...)}
+	 dt = number: 0.00713246
+(9) Lua upvalue 'gameUpdateRef' at file 'game.lua:2863'
+	Local variables:
+	 self = table: 0x2b4b3650  {F_GUIDE:false, F_CRASH_REPORTS:false, F_QUIT_BUTTON:true, HUD_tags:table: 0x2f1956f8 (more...)}
+	 dt = number: 0.00713246
+(10) Lua upvalue 'upd' at Steamodded file 'src/ui.lua:81' 
+	Local variables:
+	 self = table: 0x2b4b3650  {F_GUIDE:false, F_CRASH_REPORTS:false, F_QUIT_BUTTON:true, HUD_tags:table: 0x2f1956f8 (more...)}
+	 dt = number: 0.00713246
+(11) Lua upvalue 'upd' at file 'main.lua:1756'
+	Local variables:
+	 self = table: 0x2b4b3650  {F_GUIDE:false, F_CRASH_REPORTS:false, F_QUIT_BUTTON:true, HUD_tags:table: 0x2f1956f8 (more...)}
+	 dt = number: 0.00713246
+(12) Lua upvalue 'upd' at file 'Items/Blinds.lua:1310' (from mod with id Cryptid)
+	Local variables:
+	 self = table: 0x2b4b3650  {F_GUIDE:false, F_CRASH_REPORTS:false, F_QUIT_BUTTON:true, HUD_tags:table: 0x2f1956f8 (more...)}
+	 dt = number: 0.00713246
+(13) Lua upvalue 'upd' at file 'Items/CodeCards.lua:4106' (from mod with id Cryptid)
+	Local variables:
+	 self = table: 0x2b4b3650  {F_GUIDE:false, F_CRASH_REPORTS:false, F_QUIT_BUTTON:true, HUD_tags:table: 0x2f1956f8 (more...)}
+	 dt = number: 0.00713246
+(14) Lua upvalue 'upd' at file 'Items/Decks.lua:429' (from mod with id Cryptid)
+	Local variables:
+	 self = table: 0x2b4b3650  {F_GUIDE:false, F_CRASH_REPORTS:false, F_QUIT_BUTTON:true, HUD_tags:table: 0x2f1956f8 (more...)}
+	 dt = number: 0.00713246
+(15) Lua upvalue 'upd' at file 'Items/MiscJokers.lua:6658' (from mod with id Cryptid)
+	Local variables:
+	 self = table: 0x2b4b3650  {F_GUIDE:false, F_CRASH_REPORTS:false, F_QUIT_BUTTON:true, HUD_tags:table: 0x2f1956f8 (more...)}
+	 dt = number: 0.00713246
+(16) Lua method 'update' at file 'Cryptid.lua:2948' (from mod with id Cryptid)
+	Local variables:
+	 self = table: 0x2b4b3650  {F_GUIDE:false, F_CRASH_REPORTS:false, F_QUIT_BUTTON:true, HUD_tags:table: 0x2f1956f8 (more...)}
+	 dt = number: 0.00713246
+(17) Lua upvalue 'oldupd' at file 'main.lua:998'
+	Local variables:
+	 dt = number: 0.00713246
+(18) Lua field 'update' at file 'main.lua:1783'
+	Local variables:
+	 dt = number: 0.00713246
+(19) Lua function '?' at file 'main.lua:931' (best guess)
+(20) global C function 'xpcall'
+(21) LÖVE function at file 'boot.lua:377' (best guess)
+	Local variables:
+	 func = Lua function '?' (defined at line 902 of chunk main.lua)
+	 inerror = boolean: true
+	 deferErrhand = Lua function '(LÖVE Function)' (defined at line 348 of chunk [love "boot.lua"])
+	 earlyinit = Lua function '(LÖVE Function)' (defined at line 355 of chunk [love "boot.lua"])
+
+INFO - [G] line not found
+INFO - [G] file not found: main.lua: No such file or directory
+INFO - [G] file not found: main.lua: No such file or directory
+INFO - [G] 2025-01-20 18:43:12 :: INFO  :: StackTrace :: Additional Context:
+Balatro Version: 1.0.1n-FULL
+Modded Version: 1.0.0~ALPHA-1320a-STEAMODDED
+LÖVE Version: 11.5.0
+Lovely Version: 0.6.0
+Platform: Windows
+Steamodded Mods:
+    1: Talisman by MathIsFun_, Mathguy24, jenwalter666, cg-223 [ID: Talisman, Version: 2.0.2, Uses Lovely]
+        Break Infinity: omeganum
+    2: Cryptid by MathIsFun_, Cryptid and Balatro Discords [ID: Cryptid, Priority: 1e+299, Version: 0.5.3a, Uses Lovely]
+Lovely Mods:

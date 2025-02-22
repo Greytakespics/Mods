@@ -1,0 +1,126 @@
+INFO - [♥] Lovely 0.6.0
+INFO - [♥] Game directory is at "X:\\SteamLibrary\\steamapps\\common\\Balatro"
+INFO - [♥] Writing logs to "C:\\Users\\Grayson\\AppData\\Roaming\\Balatro\\Mods\\lovely\\log"
+INFO - [♥] Using mod directory at "C:\\Users\\Grayson\\AppData\\Roaming\\Balatro\\Mods"
+WARN - [♥] Unknown key `patches.47.?.match_indent` found in patch file at "C:\\Users\\Grayson\\AppData\\Roaming\\Balatro\\Mods\\smods-old-calc\\lovely\\fixes.toml", ignoring it
+INFO - [♥] Cleaning up dumps directory at "C:\\Users\\Grayson\\AppData\\Roaming\\Balatro\\Mods\\lovely\\dump"
+INFO - [♥] Initialization complete in 825ms
+WARN - [♥] Pattern 'G.ARGS.score_intensity.organ = G.video_organ or G.ARGS.score_intensity.required_score > 0 and math.max(math.min(0.4, 0.1*math.log(G.ARGS.score_intensity.earned_score/(G.ARGS.score_intensity.required_score+1), 5)),0.) or 0' on target 'main.lua' resulted in no matches
+WARN - [♥] Pattern 'if type(G.GAME.current_round.current_hand.chips) ~= \'number\' or type(G.GAME.current_round.current_hand.mult) ~= \'number\' then' on target 'main.lua' resulted in no matches
+INFO - [♥] Applied 15 patches to 'main.lua'
+INFO - [♥] Applied 2 patches to 'engine/string_packer.lua'
+INFO - [♥] Applied 6 patches to 'engine/controller.lua'
+INFO - [♥] Applied 13 patches to 'back.lua'
+INFO - [♥] Applied 14 patches to 'tag.lua'
+INFO - [♥] Applied 2 patches to 'engine/moveable.lua'
+INFO - [♥] Applied 2 patches to 'engine/sprite.lua'
+INFO - [♥] Applied 2 patches to 'engine/animatedsprite.lua'
+WARN - [♥] Pattern 'assembled_string = assembled_string..(type(subpart) == \'string\' and subpart or args.vars[tonumber(subpart[1])] or \'ERROR\')' on target 'functions/misc_functions.lua' resulted in no matches
+INFO - [♥] Applied 47 patches to 'functions/misc_functions.lua'
+INFO - [♥] Applied 74 patches to 'game.lua'
+INFO - [♥] Applied 1 patch to 'globals.lua'
+INFO - [♥] Applied 6 patches to 'engine/ui.lua'
+WARN - [♥] Pattern '{card_limit = _size, type = \'consumeable\', highlight_limit = 1}' on target 'functions/UI_definitions.lua' resulted in no matches
+WARN - [♥] Pattern '{n=G.UIT.T, config={text = G.GAME.hands[handname].chips, scale = 0.45, colour = G.C.UI.TEXT_LIGHT}},' on target 'functions/UI_definitions.lua' resulted in no matches
+WARN - [♥] Pattern '{n=G.UIT.T, config={text = G.GAME.hands[handname].mult, scale = 0.45, colour = G.C.UI.TEXT_LIGHT}}' on target 'functions/UI_definitions.lua' resulted in no matches
+INFO - [♥] Applied 86 patches to 'functions/UI_definitions.lua'
+WARN - [♥] Pattern 'end\n    end\n\n    }) end\n' on target 'functions/state_events.lua' resulted in no matches
+WARN - [♥] Pattern 'ease_to = G.GAME.chips + math.floor(hand_chips * mult) * (e and e.antiscore and -1 or 1),' on target 'functions/state_events.lua' resulted in no matches
+WARN - [♥] Pattern 'if cards_destroyed[i].ability.name == \'Glass Card\' then' on target 'functions/state_events.lua' resulted in no matches
+WARN - [♥] Pattern 'local hand_space = e or math.min(#G.deck.cards, G.hand.config.card_limit - #G.hand.cards)' on target 'functions/state_events.lua' resulted in no matches
+WARN - [♥] Pattern 'if scoring_hand[i].ability.name == \'Glass Card\' and not scoring_hand[i].debuff and pseudorandom(\'glass\') < G.GAME.probabilities.normal/scoring_hand[i].ability.extra then' on target 'functions/state_events.lua' resulted in no matches
+INFO - [♥] Applied 108 patches to 'functions/state_events.lua'
+WARN - [♥] Regex '(?<indent>[\\t ]*)if G\\.F_NO_ACHIEVEMENTS then return end\\n[\\s\\S][\\s\\S]{16}--\\|LOCAL SETTINGS FILE' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'function generate_card_ui(_c, full_UI_table, specific_vars, card_type, badges, hide_desc, main_start, main_end)' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern '{n=G.UIT.T, config={text = localize(\'$\')..config.dollars, scale = 1.2*scale, colour = G.C.WHITE, shadow = true, juice = true}}' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'elseif _c.name == \'Cryptid\' then loc_vars = {_c.config.extra}' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'elseif _c.name == \"Clearance Sale\" or _c.name == \"Liquidation\" then loc_vars = {_c.config.extra}' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'elseif v.boss.showdown and (G.GAME.round_resets.ante)%G.GAME.win_ante == 0 and G.GAME.round_resets.ante >= 2 then' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'if v == \'negative_consumable\' then info_queue[#info_queue+1] = {key = \'e_negative_consumable\', set = \'Edition\', config = {extra = 1}} end' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'func = (function() if eval_func(card) then if not first or first then card:juice_up(0.1, 0.1) end;juice_card_until(card, eval_func, nil, 0.8) end return true end)' on target 'functions/common_events.lua' resulted in no matches
+INFO - [♥] Applied 122 patches to 'functions/common_events.lua'
+WARN - [♥] Pattern 'G.pack_cards:emplace(v)' on target 'functions/button_callbacks.lua' resulted in no matches
+INFO - [♥] Applied 51 patches to 'functions/button_callbacks.lua'
+WARN - [♥] Pattern 'if k ~= \'focused_ui\' and k ~= \"front\" and k ~= \"back\" and k ~= \"soul_parts\" and k ~= \"center\" and k ~= \'floating_sprite\' and k~= \"shadow\" and k~= \"use_button\" and k ~= \'buy_button\' and k ~= \'buy_and_use_button\' and k~= \"debuff\" and k ~= \'price\' and k~= \'particles\' and k ~= \'h_popup\' then v:draw() end' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'if center_table.name == \'Overstock\' or center_table.name == \'Overstock Plus\' then' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'if self.ability.name == \'Campfire\' and G.GAME.blind.boss and not (G.GAME.blind.config and G.GAME.blind.config.bonus) and self.ability.x_mult > 1 then' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'if self.ability.name:find(\'Arcana\') then' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'if center_table.name == \'Overstock\' or center_table.name == \'Overstock Plus\' then' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'if self.ability.name == \'The Hermit\' or self.ability.consumeable.hand_type or self.ability.name == \'Temperance\' or self.ability.name == \'Black Hole\' then' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'if self.ability.queue_negative_removal then' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'if G.GAME.blind then G.E_MANAGER:add_event(Event({ func = function() G.GAME.blind:set_blind(nil, true, nil); return true end })) end' on target 'card.lua' resulted in no matches
+INFO - [♥] Applied 209 patches to 'card.lua'
+WARN - [♥] Pattern 'table.sort(self.cards, function (a, b) return a.T.x + a.T.w/2 - 100*(a.pinned and a.sort_id or 0) < b.T.x + b.T.w/2 - 100*(b.pinned and b.sort_id or 0) end)' on target 'cardarea.lua' resulted in no matches
+INFO - [♥] Applied 14 patches to 'cardarea.lua'
+INFO - [♥] Applied 32 patches to 'blind.lua'
+INFO - [♥] Applied 5 patches to 'engine/text.lua'
+INFO - [G] Failed to connect to the debug server
+INFO - [G] 2025-01-22 21:33:22 :: DEBUG :: DebugConsole :: Steamodded Debug Socket started !
+INFO - [♥] Applied 9 patches to 'engine/sound_manager.lua'
+INFO - [♥] Applied 2 patches to 'engine/string_packer.lua'
+INFO - [G] 2025-01-22 21:33:24 :: TRACE :: Loader :: Processing Mod file (Legacy header): Cryptid.lua
+INFO - [G] 2025-01-22 21:33:24 :: TRACE :: Loader :: Saving Mod Info: Cryptid
+INFO - [G] 2025-01-22 21:33:24 :: TRACE :: Loader :: Processing Mod file (Legacy header): steamodded_metadata.lua
+INFO - [G] 2025-01-22 21:33:24 :: TRACE :: Loader :: Saving Mod Info: Talisman
+INFO - [G] Loading file Achievements.lua
+INFO - [G] Loading file Antimatter.lua
+INFO - [G] Loading file Blinds.lua
+INFO - [G] Loading file Challenges.lua
+INFO - [G] Loading file CodeCards.lua
+INFO - [G] Loading file CryptidJokerDisplay.lua
+INFO - [G] Warning: CryptidJokerDisplay.lua has no items
+INFO - [G] Loading file Decks.lua
+INFO - [G] Loading file Enhanced.lua
+INFO - [G] Loading file EpicJokers.lua
+INFO - [G] Loading file Exotic.lua
+INFO - [G] Loading file M.lua
+INFO - [G] Loading file Misc.lua
+INFO - [G] Loading file MiscJokers.lua
+INFO - [G] Loading file Planets.lua
+INFO - [G] Loading file Sleeves.lua
+INFO - [G] Loading file Spectrals.lua
+INFO - [G] Loading file Spooky.lua
+INFO - [G] Loading file Stakes.lua
+INFO - [G] Loading file Tags.lua
+INFO - [G] Loading file Vouchers.lua
+INFO - [G] Loading file dummy_https.lua
+INFO - [G] Loading file dummy_timerblinds.lua
+INFO - [G] Warning: dummy_timerblinds.lua has no items
+INFO - [G] 2025-01-22 21:33:24 :: WARN  :: Atlas :: Detected duplicate register call on object cry_modicon
+INFO - [G] 2025-01-22 21:33:24 :: WARN  :: Atlas :: Detected duplicate register call on object cry_placeholders
+INFO - [G] 2025-01-22 21:33:24 :: WARN  :: Atlas :: Detected duplicate register call on object cry_atlasepic
+INFO - [G] 2025-01-22 21:33:24 :: WARN  :: Atlas :: Detected duplicate register call on object cry_atlasone
+INFO - [G] 2025-01-22 21:33:24 :: WARN  :: Atlas :: Detected duplicate register call on object cry_atlastwo
+INFO - [G] 2025-01-22 21:33:24 :: WARN  :: Atlas :: Detected duplicate register call on object cry_atlasthree
+INFO - [G] 2025-01-22 21:33:24 :: WARN  :: Atlas :: Detected duplicate register call on object cry_atlasspooky
+INFO - [G] 2025-01-22 21:33:24 :: WARN  :: Atlas :: Detected duplicate register call on object cry_atlasexotic
+INFO - [G] 2025-01-22 21:33:24 :: WARN  :: Atlas :: Detected duplicate register call on object cry_atlasnotjokers
+INFO - [G] 2025-01-22 21:33:24 :: WARN  :: Atlas :: Detected duplicate register call on object cry_tag_cry
+INFO - [G] 2025-01-22 21:33:24 :: WARN  :: Atlas :: Detected duplicate register call on object cry_misc
+INFO - [G] 2025-01-22 21:33:24 :: WARN  :: Sticker :: Detected duplicate register call on object perishable
+INFO - [G] 2025-01-22 21:33:24 :: WARN  :: Sticker :: Detected duplicate register call on object pinned
+INFO - [G] 2025-01-22 21:33:24 :: WARN  :: Sticker :: Detected duplicate register call on object eternal
+INFO - [G] 2025-01-22 21:33:24 :: WARN  :: Sticker :: Detected duplicate register call on object rental
+INFO - [G] 2025-01-22 21:33:24 :: INFO  :: TIMER :: [0000] Injected Language in 0.015 ms
+INFO - [G] 2025-01-22 21:33:24 :: INFO  :: TIMER :: [0000] Injected [INTERNAL] in 12.055 ms
+INFO - [G] 2025-01-22 21:33:25 :: INFO  :: TIMER :: [0030] Injected Atlas in 927.296 ms
+INFO - [G] 2025-01-22 21:33:25 :: INFO  :: TIMER :: [0025] Injected Sound in 113.155 ms
+INFO - [G] 2025-01-22 21:33:25 :: INFO  :: TIMER :: [0032] Injected Stake in 1.042 ms
+INFO - [G] 2025-01-22 21:33:25 :: INFO  :: TIMER :: [0008] Injected Rarity in 0.022 ms
+INFO - [G] 2025-01-22 21:33:25 :: INFO  :: TIMER :: [0007] Injected ObjectType in 0.085 ms
+INFO - [G] 2025-01-22 21:33:25 :: INFO  :: TIMER :: [0391] Injected Center in 1.662 ms
+INFO - [G] 2025-01-22 21:33:25 :: INFO  :: TIMER :: [0011] Injected Undiscovered Sprite in 0.011 ms
+INFO - [G] 2025-01-22 21:33:25 :: INFO  :: TIMER :: [0027] Injected Blind in 0.054 ms
+INFO - [G] 2025-01-22 21:33:25 :: INFO  :: TIMER :: [0002] Injected Seal in 0.054 ms
+INFO - [G] 2025-01-22 21:33:25 :: INFO  :: TIMER :: [0004] Injected Suit in 0.069 ms
+INFO - [G] 2025-01-22 21:33:25 :: INFO  :: TIMER :: [0013] Injected Rank in 0.048 ms
+INFO - [G] 2025-01-22 21:33:25 :: INFO  :: TIMER :: [0016] Injected DeckSkin in 0.097 ms
+INFO - [G] 2025-01-22 21:33:25 :: INFO  :: TIMER :: [0016] Injected PokerHand in 0.120 ms
+INFO - [G] 2025-01-22 21:33:25 :: INFO  :: TIMER :: [0031] Injected Challenge in 0.039 ms
+INFO - [G] 2025-01-22 21:33:25 :: INFO  :: TIMER :: [0028] Injected Tag in 0.469 ms
+INFO - [G] 2025-01-22 21:33:25 :: INFO  :: TIMER :: [0009] Injected Sticker in 0.842 ms
+INFO - [G] 2025-01-22 21:33:25 :: INFO  :: TIMER :: [0009] Injected Shader in 187.791 ms
+INFO - [G] 2025-01-22 21:33:25 :: INFO  :: TIMER :: [0001] Injected Keybind in 0.009 ms
+INFO - [G] 2025-01-22 21:33:25 :: INFO  :: TIMER :: [0020] Injected Achievement in 0.058 ms
+INFO - [G] 2025-01-22 21:33:25 :: INFO  :: TIMER :: [0000] Injected [INTERNAL] in 15.864 ms
+INFO - [G] 2025-01-22 21:33:25 :: INFO  :: TIMER :: [0011] Injected Event in 0.018 ms

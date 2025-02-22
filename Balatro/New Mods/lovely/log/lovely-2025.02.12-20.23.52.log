@@ -1,0 +1,497 @@
+INFO - [♥] Lovely 0.6.0
+INFO - [♥] Game directory is at "X:\\SteamLibrary\\steamapps\\common\\Balatro"
+INFO - [♥] Writing logs to "C:\\Users\\Grayson\\AppData\\Roaming\\Balatro\\Mods\\lovely\\log"
+INFO - [♥] Using mod directory at "C:\\Users\\Grayson\\AppData\\Roaming\\Balatro\\Mods"
+WARN - [♥] Unknown key `patches.17.?.match_indent` found in patch file at "C:\\Users\\Grayson\\AppData\\Roaming\\Balatro\\Mods\\Cryptid\\lovely\\Code.toml", ignoring it
+WARN - [♥] Unknown key `patches.7.?.match_indent` found in patch file at "C:\\Users\\Grayson\\AppData\\Roaming\\Balatro\\Mods\\Cryptid\\lovely\\Voucher.toml", ignoring it
+WARN - [♥] Unknown key `patches.47.?.match_indent` found in patch file at "C:\\Users\\Grayson\\AppData\\Roaming\\Balatro\\Mods\\smods-old-calc\\lovely\\fixes.toml", ignoring it
+INFO - [♥] Cleaning up dumps directory at "C:\\Users\\Grayson\\AppData\\Roaming\\Balatro\\Mods\\lovely\\dump"
+INFO - [♥] Initialization complete in 33ms
+WARN - [♥] Pattern 'G.ARGS.score_intensity.organ = G.video_organ or G.ARGS.score_intensity.required_score > 0 and math.max(math.min(0.4, 0.1*math.log(G.ARGS.score_intensity.earned_score/(G.ARGS.score_intensity.required_score+1), 5)),0.) or 0' on target 'main.lua' resulted in no matches
+WARN - [♥] Pattern 'if type(G.GAME.current_round.current_hand.chips) ~= \'number\' or type(G.GAME.current_round.current_hand.mult) ~= \'number\' then' on target 'main.lua' resulted in no matches
+INFO - [♥] Applied 15 patches to 'main.lua'
+INFO - [♥] Applied 2 patches to 'engine/string_packer.lua'
+INFO - [♥] Applied 6 patches to 'engine/controller.lua'
+INFO - [♥] Applied 13 patches to 'back.lua'
+INFO - [♥] Applied 15 patches to 'tag.lua'
+INFO - [♥] Applied 2 patches to 'engine/moveable.lua'
+INFO - [♥] Applied 2 patches to 'engine/sprite.lua'
+INFO - [♥] Applied 2 patches to 'engine/animatedsprite.lua'
+WARN - [♥] Pattern 'assembled_string = assembled_string..(type(subpart) == \'string\' and subpart or args.vars[tonumber(subpart[1])] or \'ERROR\')' on target 'functions/misc_functions.lua' resulted in no matches
+INFO - [♥] Applied 48 patches to 'functions/misc_functions.lua'
+INFO - [♥] Applied 78 patches to 'game.lua'
+INFO - [♥] Applied 1 patch to 'globals.lua'
+INFO - [♥] Applied 6 patches to 'engine/ui.lua'
+WARN - [♥] Pattern '{card_limit = _size, type = \'consumeable\', highlight_limit = 1}' on target 'functions/UI_definitions.lua' resulted in no matches
+WARN - [♥] Pattern '{n=G.UIT.T, config={text = G.GAME.hands[handname].chips, scale = 0.45, colour = G.C.UI.TEXT_LIGHT}},' on target 'functions/UI_definitions.lua' resulted in no matches
+WARN - [♥] Pattern '{n=G.UIT.T, config={text = G.GAME.hands[handname].mult, scale = 0.45, colour = G.C.UI.TEXT_LIGHT}}' on target 'functions/UI_definitions.lua' resulted in no matches
+INFO - [♥] Applied 86 patches to 'functions/UI_definitions.lua'
+WARN - [♥] Pattern 'end\n    end\n\n    }) end\n' on target 'functions/state_events.lua' resulted in no matches
+WARN - [♥] Pattern 'ease_to = G.GAME.chips + math.floor(hand_chips * mult) * (e and e.antiscore and -1 or 1),' on target 'functions/state_events.lua' resulted in no matches
+WARN - [♥] Pattern 'if cards_destroyed[i].ability.name == \'Glass Card\' then' on target 'functions/state_events.lua' resulted in no matches
+WARN - [♥] Pattern 'local hand_space = e or math.min(#G.deck.cards, G.hand.config.card_limit - #G.hand.cards)' on target 'functions/state_events.lua' resulted in no matches
+WARN - [♥] Pattern 'if SMODS.has_enhancement(scoring_hand[i], \'m_glass\') and not scoring_hand[i].debuff and pseudorandom(\'glass\') < G.GAME.probabilities.normal/scoring_hand[i].ability.extra then' on target 'functions/state_events.lua' resulted in no matches
+INFO - [♥] Applied 113 patches to 'functions/state_events.lua'
+WARN - [♥] Regex '(?<indent>[\\t ]*)if G\\.F_NO_ACHIEVEMENTS then return end\\n[\\s\\S][\\s\\S]{16}--\\|LOCAL SETTINGS FILE' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'function generate_card_ui(_c, full_UI_table, specific_vars, card_type, badges, hide_desc, main_start, main_end)' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern '{n=G.UIT.T, config={text = localize(\'$\')..config.dollars, scale = 1.2*scale, colour = G.C.WHITE, shadow = true, juice = true}}' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'bbbbb' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'elseif _c.name == \'Cryptid\' then loc_vars = {_c.config.extra}' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'elseif _c.name == \"Clearance Sale\" or _c.name == \"Liquidation\" then loc_vars = {_c.config.extra}' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'elseif v.boss.showdown and (G.GAME.round_resets.ante)%G.GAME.win_ante == 0 and G.GAME.round_resets.ante >= 2 then' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'if v == \'negative_consumable\' then info_queue[#info_queue+1] = {key = \'e_negative_consumable\', set = \'Edition\', config = {extra = 1}} end' on target 'functions/common_events.lua' resulted in no matches
+WARN - [♥] Pattern 'func = (function() if eval_func(card) then if not first or first then card:juice_up(0.1, 0.1) end;juice_card_until(card, eval_func, nil, 0.8) end return true end)' on target 'functions/common_events.lua' resulted in no matches
+INFO - [♥] Applied 126 patches to 'functions/common_events.lua'
+WARN - [♥] Pattern 'G.pack_cards:emplace(v)' on target 'functions/button_callbacks.lua' resulted in no matches
+INFO - [♥] Applied 52 patches to 'functions/button_callbacks.lua'
+WARN - [♥] Pattern 'if center_table.name == \'Overstock\' or center_table.name == \'Overstock Plus\' then' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'if self.ability.name == \'Campfire\' and G.GAME.blind.boss and not (G.GAME.blind.config and G.GAME.blind.config.bonus) and self.ability.x_mult > 1 then' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'if self.ability.name:find(\'Arcana\') then' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'if center_table.name == \'Overstock\' or center_table.name == \'Overstock Plus\' then' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'if self.ability.name == \'The Hermit\' or self.ability.consumeable.hand_type or self.ability.name == \'Temperance\' or self.ability.name == \'Black Hole\' then' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'if self.ability.queue_negative_removal then' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'if G.GAME.blind then G.E_MANAGER:add_event(Event({ func = function() G.GAME.blind:set_blind(nil, true, nil); return true end })) end' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'elseif self.ability.name == \'Business Card\' then loc_vars = {\'\'..(G.GAME and G.GAME.probabilities.normal or 1), self.ability.extra}' on target 'card.lua' resulted in no matches
+WARN - [♥] Pattern 'pseudorandom(\'business\') < G.GAME.probabilities.normal/self.ability.extra then' on target 'card.lua' resulted in no matches
+INFO - [♥] Applied 228 patches to 'card.lua'
+WARN - [♥] Pattern 'table.sort(self.cards, function (a, b) return a.T.x + a.T.w/2 - 100*(a.pinned and a.sort_id or 0) < b.T.x + b.T.w/2 - 100*(b.pinned and b.sort_id or 0) end)' on target 'cardarea.lua' resulted in no matches
+INFO - [♥] Applied 14 patches to 'cardarea.lua'
+INFO - [♥] Applied 32 patches to 'blind.lua'
+INFO - [♥] Applied 5 patches to 'engine/text.lua'
+INFO - [G] Failed to connect to the debug server
+INFO - [G] 2025-02-12 20:23:57 :: DEBUG :: DebugConsole :: Steamodded Debug Socket started !
+INFO - [♥] Applied 9 patches to 'engine/sound_manager.lua'
+INFO - [♥] Applied 2 patches to 'engine/string_packer.lua'
+INFO - [G] 2025-02-12 20:23:59 :: TRACE :: Loader :: Processing Mod file (Legacy header): Cryptid.lua
+INFO - [G] 2025-02-12 20:23:59 :: TRACE :: Loader :: Saving Mod Info: Cryptid
+INFO - [G] 2025-02-12 20:23:59 :: TRACE :: Loader :: Processing Mod file (Legacy header): steamodded_metadata.lua
+INFO - [G] 2025-02-12 20:23:59 :: TRACE :: Loader :: Saving Mod Info: Talisman
+INFO - [G] Loading file Achievements.lua
+INFO - [G] Loading file Antimatter.lua
+INFO - [G] Loading file Blinds.lua
+INFO - [G] Loading file Challenges.lua
+INFO - [G] Loading file CodeCards.lua
+INFO - [G] Loading file CryptidJokerDisplay.lua
+INFO - [G] Warning: CryptidJokerDisplay.lua has no items
+INFO - [G] Loading file Decks.lua
+INFO - [G] Loading file Enhanced.lua
+INFO - [G] Loading file EpicJokers.lua
+INFO - [G] Loading file Exotic.lua
+INFO - [G] Loading file M.lua
+INFO - [G] Loading file Misc.lua
+INFO - [G] Loading file MiscJokers.lua
+INFO - [G] Loading file Planets.lua
+INFO - [G] Loading file Sleeves.lua
+INFO - [G] Loading file Spectrals.lua
+INFO - [G] Loading file Spooky.lua
+INFO - [G] Loading file Stakes.lua
+INFO - [G] Loading file Tags.lua
+INFO - [G] Loading file Vouchers.lua
+INFO - [G] Loading file dummy_https.lua
+INFO - [G] Loading file dummy_timerblinds.lua
+INFO - [G] Warning: dummy_timerblinds.lua has no items
+INFO - [G] 2025-02-12 20:23:59 :: WARN  :: Atlas :: Detected duplicate register call on object cry_modicon
+INFO - [G] 2025-02-12 20:23:59 :: WARN  :: Atlas :: Detected duplicate register call on object cry_placeholders
+INFO - [G] 2025-02-12 20:23:59 :: WARN  :: Atlas :: Detected duplicate register call on object cry_atlasepic
+INFO - [G] 2025-02-12 20:23:59 :: WARN  :: Atlas :: Detected duplicate register call on object cry_atlasone
+INFO - [G] 2025-02-12 20:23:59 :: WARN  :: Atlas :: Detected duplicate register call on object cry_atlastwo
+INFO - [G] 2025-02-12 20:23:59 :: WARN  :: Atlas :: Detected duplicate register call on object cry_atlasthree
+INFO - [G] 2025-02-12 20:23:59 :: WARN  :: Atlas :: Detected duplicate register call on object cry_atlasspooky
+INFO - [G] 2025-02-12 20:23:59 :: WARN  :: Atlas :: Detected duplicate register call on object cry_atlasexotic
+INFO - [G] 2025-02-12 20:23:59 :: WARN  :: Atlas :: Detected duplicate register call on object cry_atlasnotjokers
+INFO - [G] 2025-02-12 20:23:59 :: WARN  :: Atlas :: Detected duplicate register call on object cry_tag_cry
+INFO - [G] 2025-02-12 20:23:59 :: WARN  :: Atlas :: Detected duplicate register call on object cry_misc
+INFO - [G] 2025-02-12 20:23:59 :: WARN  :: Sticker :: Detected duplicate register call on object perishable
+INFO - [G] 2025-02-12 20:23:59 :: WARN  :: Sticker :: Detected duplicate register call on object pinned
+INFO - [G] 2025-02-12 20:23:59 :: WARN  :: Sticker :: Detected duplicate register call on object eternal
+INFO - [G] 2025-02-12 20:23:59 :: WARN  :: Sticker :: Detected duplicate register call on object rental
+INFO - [G] 2025-02-12 20:23:59 :: INFO  :: TIMER :: [0000] Injected Language in 0.001 ms
+INFO - [G] 2025-02-12 20:23:59 :: INFO  :: TIMER :: [0000] Injected [INTERNAL] in 1.003 ms
+INFO - [G] 2025-02-12 20:24:00 :: INFO  :: TIMER :: [0030] Injected Atlas in 987.478 ms
+INFO - [G] 2025-02-12 20:24:00 :: INFO  :: TIMER :: [0025] Injected Sound in 14.013 ms
+INFO - [G] 2025-02-12 20:24:00 :: INFO  :: TIMER :: [0032] Injected Stake in 1.018 ms
+INFO - [G] 2025-02-12 20:24:00 :: INFO  :: TIMER :: [0008] Injected Rarity in 0.051 ms
+INFO - [G] 2025-02-12 20:24:00 :: INFO  :: TIMER :: [0007] Injected ObjectType in 0.070 ms
+INFO - [G] 2025-02-12 20:24:00 :: INFO  :: TIMER :: [0400] Injected Center in 2.051 ms
+INFO - [G] 2025-02-12 20:24:00 :: INFO  :: TIMER :: [0011] Injected Undiscovered Sprite in 0.013 ms
+INFO - [G] 2025-02-12 20:24:00 :: INFO  :: TIMER :: [0027] Injected Blind in 0.208 ms
+INFO - [G] 2025-02-12 20:24:00 :: INFO  :: TIMER :: [0002] Injected Seal in 0.051 ms
+INFO - [G] 2025-02-12 20:24:00 :: INFO  :: TIMER :: [0004] Injected Suit in 0.074 ms
+INFO - [G] 2025-02-12 20:24:00 :: INFO  :: TIMER :: [0013] Injected Rank in 0.055 ms
+INFO - [G] 2025-02-12 20:24:00 :: INFO  :: TIMER :: [0016] Injected DeckSkin in 0.050 ms
+INFO - [G] 2025-02-12 20:24:00 :: INFO  :: TIMER :: [0016] Injected PokerHand in 0.059 ms
+INFO - [G] 2025-02-12 20:24:00 :: INFO  :: TIMER :: [0031] Injected Challenge in 0.184 ms
+INFO - [G] 2025-02-12 20:24:00 :: INFO  :: TIMER :: [0028] Injected Tag in 0.232 ms
+INFO - [G] 2025-02-12 20:24:00 :: INFO  :: TIMER :: [0010] Injected Sticker in 0.915 ms
+INFO - [G] 2025-02-12 20:24:00 :: INFO  :: TIMER :: [0009] Injected Shader in 135.642 ms
+INFO - [G] 2025-02-12 20:24:00 :: INFO  :: TIMER :: [0001] Injected Keybind in 0.009 ms
+INFO - [G] 2025-02-12 20:24:00 :: INFO  :: TIMER :: [0020] Injected Achievement in 0.128 ms
+INFO - [G] 2025-02-12 20:24:00 :: INFO  :: TIMER :: [0000] Injected [INTERNAL] in 3.913 ms
+INFO - [G] 2025-02-12 20:24:00 :: INFO  :: TIMER :: [0011] Injected Event in 0.023 ms
+INFO - [G] ERROR LOADING GAME: Card area 'shop_vouchers' not instantiated before load
+INFO - [G] ERROR LOADING GAME: Card area 'shop_jokers' not instantiated before load
+INFO - [G] ERROR LOADING GAME: Card area 'shop_booster' not instantiated before load
+INFO - [G] LONG DT @ 146: 0.050135480387055
+INFO - [G] LONG DT @ 146: 0.058956701016345
+INFO - [G] LONG DT @ 148: 0.057713767567644
+INFO - [G] LONG DT @ 151: 0.055618005336803
+INFO - [G] LONG DT @ 151: 0.055745464269443
+INFO - [G] LONG DT @ 151: 0.052475811415554
+INFO - [G] LONG DT @ 249: 0.053526937509886
+INFO - [G] LONG DT @ 311: 0.052973532817898
+INFO - [G] LONG DT @ 312: 0.059357299484984
+INFO - [G] LONG DT @ 312: 0.050022439587984
+INFO - [G] LONG DT @ 312: 0.061931782240366
+INFO - [G] LONG DT @ 313: 0.051634905792288
+INFO - [G] LONG DT @ 313: 0.062068870195672
+INFO - [G] LONG DT @ 313: 0.05191217615653
+INFO - [G] LONG DT @ 317: 0.076544575462887
+INFO - [G] LONG DT @ 317: 0.069727760370311
+INFO - [G] LONG DT @ 317: 0.063897128296251
+INFO - [G] LONG DT @ 317: 0.059248322636998
+INFO - [G] LONG DT @ 317: 0.055745798109599
+INFO - [G] LONG DT @ 318: 0.05157073848767
+INFO - [G] LONG DT @ 481: 0.055502528433195
+INFO - [G] LONG DT @ 547: 0.064761283512553
+INFO - [G] LONG DT @ 547: 0.054342406810042
+INFO - [G] LONG DT @ 584: 0.054578735427764
+INFO - [G] LONG DT @ 585: 0.064795824592679
+INFO - [G] LONG DT @ 585: 0.054838039674144
+INFO - [G] LONG DT @ 586: 0.067979960097764
+INFO - [G] LONG DT @ 586: 0.058715728078225
+INFO - [G] LONG DT @ 586: 0.063590670260028
+INFO - [G] LONG DT @ 586: 0.053249236208013
+INFO - [G] LONG DT @ 590: 0.093931145068271
+INFO - [G] LONG DT @ 591: 0.083727616054627
+INFO - [G] LONG DT @ 591: 0.075794472843697
+INFO - [G] LONG DT @ 591: 0.069298138274951
+INFO - [G] LONG DT @ 591: 0.064058770619959
+INFO - [G] LONG DT @ 591: 0.060068736495981
+INFO - [G] LONG DT @ 591: 0.056828149196772
+INFO - [G] LONG DT @ 591: 0.054264879357422
+INFO - [G] LONG DT @ 591: 0.052393003485943
+INFO - [G] LONG DT @ 591: 0.05073886278876
+INFO - [G] LONG DT @ 675: 0.058842060073574
+INFO - [G] LONG DT @ 675: 0.056126048058855
+INFO - [G] LONG DT @ 675: 0.052992678447082
+INFO - [G] LONG DT @ 677: 0.06890683405101
+INFO - [G] LONG DT @ 677: 0.061968527240791
+INFO - [G] LONG DT @ 677: 0.056238281792637
+INFO - [G] LONG DT @ 677: 0.051560965434117
+INFO - [G] LONG DT @ 679: 0.067255774416579
+INFO - [G] LONG DT @ 679: 0.060774719533253
+INFO - [G] LONG DT @ 679: 0.055776895626613
+INFO - [G] LONG DT @ 679: 0.051574256501287
+INFO - [G] LONG DT @ 680: 0.055854763245031
+INFO - [G] LONG DT @ 727: 0.065282690363011
+INFO - [G] LONG DT @ 727: 0.055198092290407
+INFO - [G] LONG DT @ 740: 0.053135387804177
+INFO - [G] LONG DT @ 774: 0.055183481559989
+INFO - [G] LONG DT @ 776: 0.053783200821994
+INFO - [G] LONG DT @ 777: 0.067236223249027
+INFO - [G] LONG DT @ 777: 0.056527538599233
+INFO - [G] LONG DT @ 778: 0.064265734350807
+INFO - [G] LONG DT @ 778: 0.054170607480633
+INFO - [G] LONG DT @ 779: 0.063834004922111
+INFO - [G] LONG DT @ 779: 0.096407103937688
+INFO - [G] LONG DT @ 779: 0.080065403150145
+INFO - [G] LONG DT @ 779: 0.066352782520108
+INFO - [G] LONG DT @ 779: 0.055259986016082
+INFO - [G] LONG DT @ 786: 0.053567171509576
+INFO - [G] LONG DT @ 850: 0.070938442706209
+INFO - [G] LONG DT @ 850: 0.063533214164966
+INFO - [G] LONG DT @ 850: 0.057416571331956
+INFO - [G] LONG DT @ 850: 0.05212027706558
+INFO - [G] LONG DT @ 853: 0.066524570208433
+INFO - [G] LONG DT @ 853: 0.059534696166751
+INFO - [G] LONG DT @ 853: 0.054040036933396
+INFO - [G] LONG DT @ 855: 0.067452188458197
+INFO - [G] LONG DT @ 855: 0.060370950766565
+INFO - [G] LONG DT @ 855: 0.054580080613241
+INFO - [G] LONG DT @ 858: 0.063443867716463
+INFO - [G] LONG DT @ 858: 0.057087914173182
+INFO - [G] LONG DT @ 858: 0.051910551338541
+INFO - [G] LONG DT @ 1004: 0.056018173372058
+INFO - [G] LONG DT @ 1004: 0.069492623422709
+INFO - [G] LONG DT @ 1004: 0.058304118738162
+INFO - [G] LONG DT @ 1005: 0.084490561067561
+INFO - [G] LONG DT @ 1005: 0.070834848854048
+INFO - [G] LONG DT @ 1005: 0.059499159083225
+INFO - [G] LONG DT @ 1005: 0.050093587266583
+INFO - [G] LONG DT @ 1008: 0.1
+INFO - [G] LONG DT @ 1008: 0.083070980000007
+INFO - [G] LONG DT @ 1008: 0.069076804
+INFO - [G] LONG DT @ 1009: 0.057958183199988
+INFO - [G] LONG DT @ 1015: 0.09743747401829
+INFO - [G] LONG DT @ 1015: 0.080553599214645
+INFO - [G] LONG DT @ 1015: 0.066851319371716
+INFO - [G] LONG DT @ 1015: 0.055772095497373
+INFO - [G] LONG DT @ 1019: 0.090179087260914
+INFO - [G] LONG DT @ 1019: 0.080963809808719
+INFO - [G] LONG DT @ 1019: 0.073325227846985
+INFO - [G] LONG DT @ 1019: 0.067155802277596
+INFO - [G] LONG DT @ 1019: 0.062450801822069
+INFO - [G] LONG DT @ 1020: 0.05846732145766
+INFO - [G] LONG DT @ 1020: 0.055436957166118
+INFO - [G] LONG DT @ 1020: 0.053520865732897
+INFO - [G] LONG DT @ 1020: 0.051672712586325
+INFO - [G] LONG DT @ 1020: 0.050116930069056
+INFO - [G] LONG DT @ 1021: 0.091910892253669
+INFO - [G] LONG DT @ 1022: 0.082362073802952
+INFO - [G] LONG DT @ 1022: 0.072065879042359
+INFO - [G] LONG DT @ 1022: 0.060317403233878
+INFO - [G] LONG DT @ 1022: 0.050980642587112
+INFO - [G] LONG DT @ 1056: 0.067235911223757
+INFO - [G] LONG DT @ 1056: 0.056205428979009
+INFO - [G] LONG DT @ 1059: 0.071992831712961
+INFO - [G] LONG DT @ 1059: 0.061810125370391
+INFO - [G] LONG DT @ 1059: 0.051946400296292
+INFO - [G] LONG DT @ 1140: 0.057532578456835
+INFO - [G] LONG DT @ 1140: 0.055327983918459
+INFO - [G] LONG DT @ 1164: 0.065151870908799
+INFO - [G] LONG DT @ 1164: 0.05530581672703
+INFO - [G] LONG DT @ 1165: 0.072505037449157
+INFO - [G] LONG DT @ 1165: 0.062518689959321
+INFO - [G] LONG DT @ 1165: 0.053144651967456
+INFO - [G] LONG DT @ 1166: 0.1
+INFO - [G] LONG DT @ 1166: 0.084932919999965
+INFO - [G] LONG DT @ 1166: 0.070638815999968
+INFO - [G] LONG DT @ 1166: 0.059326472799999
+INFO - [G] LONG DT @ 1166: 0.050090898240003
+INFO - [G] LONG DT @ 1167: 0.072695741364302
+INFO - [G] LONG DT @ 1167: 0.061337733091457
+INFO - [G] LONG DT @ 1167: 0.052159566473149
+INFO - [G] LONG DT @ 1169: 0.083914928551019
+INFO - [G] LONG DT @ 1169: 0.070244322840808
+INFO - [G] LONG DT @ 1169: 0.058997138272685
+INFO - [G] LONG DT @ 1171: 0.098928894123392
+INFO - [G] LONG DT @ 1171: 0.082056975298703
+INFO - [G] LONG DT @ 1171: 0.068399400238961
+INFO - [G] LONG DT @ 1171: 0.058061380191169
+INFO - [G] LONG DT @ 1172: 0.096664131558345
+INFO - [G] LONG DT @ 1172: 0.080138785246632
+INFO - [G] LONG DT @ 1172: 0.066587128197318
+INFO - [G] LONG DT @ 1172: 0.055791642557851
+INFO - [G] LONG DT @ 1175: 0.097707951826559
+INFO - [G] LONG DT @ 1175: 0.087100681461273
+INFO - [G] LONG DT @ 1175: 0.078551725169024
+INFO - [G] LONG DT @ 1175: 0.072824520135205
+INFO - [G] LONG DT @ 1175: 0.067426256108176
+INFO - [G] LONG DT @ 1176: 0.062741204886537
+INFO - [G] LONG DT @ 1176: 0.059792283909236
+INFO - [G] LONG DT @ 1176: 0.057011667127373
+INFO - [G] LONG DT @ 1176: 0.054850453701877
+INFO - [G] LONG DT @ 1176: 0.052652542961507
+INFO - [G] LONG DT @ 1176: 0.05088975436922
+INFO - [G] LONG DT @ 1178: 0.1
+INFO - [G] LONG DT @ 1178: 0.091387839999998
+INFO - [G] LONG DT @ 1178: 0.084213351999973
+INFO - [G] LONG DT @ 1178: 0.078171321600004
+INFO - [G] LONG DT @ 1178: 0.073739297279969
+INFO - [G] LONG DT @ 1178: 0.067979737823985
+INFO - [G] LONG DT @ 1178: 0.063420350259192
+INFO - [G] LONG DT @ 1178: 0.059433900207375
+INFO - [G] LONG DT @ 1178: 0.056400200165871
+INFO - [G] LONG DT @ 1178: 0.053850100132709
+INFO - [G] LONG DT @ 1178: 0.051828280106158
+INFO - [G] LONG DT @ 1178: 0.050208404084953
+INFO - [G] LONG DT @ 1265: 0.056507165545228
+INFO - [G] LONG DT @ 1273: 0.057274207998823
+INFO - [G] LONG DT @ 1300: 0.05169499488639
+INFO - [G] LONG DT @ 1335: 0.058398178463881
+INFO - [G] LONG DT @ 1336: 0.059470893840418
+INFO - [G] LONG DT @ 1336: 0.051212375072343
+INFO - [G] LONG DT @ 1338: 0.0756119508248
+INFO - [G] LONG DT @ 1338: 0.063506460659806
+INFO - [G] LONG DT @ 1338: 0.05341648852785
+INFO - [G] LONG DT @ 1340: 0.092913714560567
+INFO - [G] LONG DT @ 1340: 0.077322651648467
+INFO - [G] LONG DT @ 1340: 0.064710281318794
+INFO - [G] LONG DT @ 1340: 0.054561645055024
+INFO - [G] LONG DT @ 1341: 0.1
+INFO - [G] LONG DT @ 1341: 0.08282457999997
+INFO - [G] LONG DT @ 1341: 0.069249924
+INFO - [G] LONG DT @ 1341: 0.058972079200005
+INFO - [G] LONG DT @ 1341: 0.050310963359995
+INFO - [G] LONG DT @ 1341: 0.093221282309131
+INFO - [G] LONG DT @ 1342: 0.1
+INFO - [G] LONG DT @ 1342: 0.083093760000002
+INFO - [G] LONG DT @ 1342: 0.069838828000005
+INFO - [G] LONG DT @ 1342: 0.058793582399997
+INFO - [G] LONG DT @ 1347: 0.086265900597975
+INFO - [G] LONG DT @ 1347: 0.07782002047837
+INFO - [G] LONG DT @ 1347: 0.071217276382719
+INFO - [G] LONG DT @ 1347: 0.065872421106151
+INFO - [G] LONG DT @ 1347: 0.062239116884917
+INFO - [G] LONG DT @ 1347: 0.059366593507939
+INFO - [G] LONG DT @ 1347: 0.056626354806344
+INFO - [G] LONG DT @ 1347: 0.054653943845111
+INFO - [G] LONG DT @ 1347: 0.052895155076078
+INFO - [G] LONG DT @ 1347: 0.051517064060845
+INFO - [G] LONG DT @ 1348: 0.050184891248704
+INFO - [G] LONG DT @ 1349: 0.097512328893333
+INFO - [G] LONG DT @ 1349: 0.087156263114675
+INFO - [G] LONG DT @ 1349: 0.078649170491755
+INFO - [G] LONG DT @ 1349: 0.06987819639339
+INFO - [G] LONG DT @ 1350: 0.058758077114715
+INFO - [G] LONG DT @ 1402: 0.052070828977092
+INFO - [G] line not found
+INFO - [G] file not found: main.lua: No such file or directory
+INFO - [G] file not found: main.lua: No such file or directory
+INFO - [G] file not found: main.lua: No such file or directory
+INFO - [G] file not found: main.lua: No such file or directory
+INFO - [G] 2025-02-12 20:47:31 :: ERROR :: StackTrace :: Oops! The game crashed
+[SMODS Cryptid "Cryptid.lua"]:923: attempt to index a number value
+Stack Traceback
+===============
+(1) Lua local 'handler' at file 'main.lua:612'
+	Local variables:
+	 msg = string: "[SMODS Cryptid \"Cryptid.lua\"]:923: attempt to index a number value"
+	 (*temporary) = Lua function '?' (defined at line 31 of chunk [SMODS _ "src/logging.lua"])
+	 (*temporary) = string: "Oops! The game crashed\
+"
+(2) LÖVE metamethod at file 'boot.lua:352'
+	Local variables:
+	 errhand = Lua function '?' (defined at line 598 of chunk main.lua)
+	 handler = Lua function '?' (defined at line 598 of chunk main.lua)
+(3) Lua method 'cry_double_scale_calc' at file 'Cryptid.lua:923' (from mod with id Cryptid)
+	Local variables:
+	 self = table: 0x22d90848  {click_offset:table: 0x22d90b18, static_rotation:false, rank:40, parent:table: 0x23712838 (more...)}
+	 orig_ability = table: 0x285c8800  {bonus:0, h_mult:0, extra:2, x_chips:0, hands_played_at_create:27, mult:0 (more...)}
+	 in_context_scaling = boolean: false
+	 orig_scale_base = number: 53
+	 orig_scale_scale = nil
+	 jkr = table: 0x22d90848  {click_offset:table: 0x22d90b18, static_rotation:false, rank:40, parent:table: 0x23712838 (more...)}
+	 dbl_info = table: 0x238c0ce8  {offset:1, base:table: 0x26757cf0, scaler_base:9, scaler:table: 0x28f0bde8 (more...)}
+	 (*temporary) = number: 2
+	 (*temporary) = string: "rounds"
+	 (*temporary) = string: "cry_rigged"
+	 (*temporary) = table: 0x22d255b0  {order:5, object_type:Sticker, no_sticker_sheet:true, _saved_d_u:true, original_key:cry_rigged (more...)}
+	 (*temporary) = nil
+	 (*temporary) = string: "cry_rigged"
+	 (*temporary) = number: nan
+	 (*temporary) = number: 2
+	 (*temporary) = number: 0
+	 (*temporary) = number: 0
+	 (*temporary) = boolean: false
+	 (*temporary) = nil
+	 (*temporary) = nil
+	 (*temporary) = nil
+	 (*temporary) = nil
+	 (*temporary) = nil
+	 (*temporary) = table: 0x27b308d0  {bonus:0, h_mult:0, extra:table: 0x27b308f8, x_chips:0, hands_played_at_create:28 (more...)}
+	 (*temporary) = boolean: false
+	 (*temporary) = nil
+	 (*temporary) = nil
+	 (*temporary) = nil
+	 (*temporary) = nil
+	 (*temporary) = nil
+	 (*temporary) = table: 0x23712838  {click_offset:table: 0x23712be0, children:table: 0x2371d8d0, shuffle_amt:0 (more...)}
+	 (*temporary) = table: 0x2371d8f8  {click_offset:table: 0x2371dc78, static_rotation:false, rank:1, parent:table: 0x23712838 (more...)}
+	 (*temporary) = table: 0x27b30e80  {copy_depth:1, cry_ease_dollars:6, no_callback:true, blueprint:1, blueprint_card:table: 0x23258820 (more...)}
+	 (*temporary) = nil
+	 (*temporary) = string: "cry_rigged"
+	 (*temporary) = number: nan
+	 (*temporary) = number: 2
+	 (*temporary) = string: "attempt to index a number value"
+(4) Lua upvalue 'cj' at file 'Cryptid.lua:1179' (from mod with id Cryptid)
+	Local variables:
+	 self = table: 0x22d90848  {click_offset:table: 0x22d90b18, static_rotation:false, rank:40, parent:table: 0x23712838 (more...)}
+	 context = table: 0x26a79bd8  {cry_ease_dollars:6}
+	 active_side = table: 0x22d90848  {click_offset:table: 0x22d90b18, static_rotation:false, rank:40, parent:table: 0x23712838 (more...)}
+	 ggpn = number: 1
+	 orig_ability = table: 0x285c8800  {bonus:0, h_mult:0, extra:2, x_chips:0, hands_played_at_create:27, mult:0 (more...)}
+	 in_context_scaling = boolean: false
+	 callback = nil
+	 ret = nil
+	 trig = nil
+(5) Lua method 'calculate_joker' at file 'Items/CodeCards.lua:4516' (from mod with id Cryptid)
+	Local variables:
+	 self = table: 0x22d90848  {click_offset:table: 0x22d90b18, static_rotation:false, rank:40, parent:table: 0x23712838 (more...)}
+	 context = table: 0x26a79bd8  {cry_ease_dollars:6}
+(6) Lua global 'ease_dollars' at file 'Items/Exotic.lua:1411' (from mod with id Cryptid)
+	Local variables:
+	 mod = number: 6
+	 x = nil
+	 (for index) = number: 40
+	 (for limit) = number: 153
+	 (for step) = number: 1
+	 i = number: 40
+(7) Lua field 'func' at file 'card.lua:1909'
+(8) Lua method 'handle' at file 'engine/event.lua:99'
+	Local variables:
+	 self = table: 0x32e6bd60  {start_timer:true, timer:TOTAL, blockable:true, trigger:immediate, func:function: 0x32e6bd38 (more...)}
+	 _results = table: 0x22f27fd8  {blocking:true, pause_skip:false, time_done:false, completed:false}
+(9) Lua method 'update' at file 'engine/event.lua:182'
+	Local variables:
+	 self = table: 0x229ec2b0  {queue_last_processed:1410.1666666657, queues:table: 0x229ec2d8, queue_dt:0.016666666666667 (more...)}
+	 dt = number: 0.0189942
+	 forced = nil
+	 (for generator) = C function: next
+	 (for state) = table: 0x229ec2d8  {unlock:table: 0x22ed11a0, other:table: 0x22ea14f8, tutorial:table: 0x22f03bc0 (more...)}
+	 (for control) = number: nan
+	 k = string: "base"
+	 v = table: 0x22ed11c8  {1:table: 0x23132118, 2:table: 0x32e6bd60, 3:table: 0x2d2a6720}
+	 blocked = boolean: false
+	 i = number: 2
+	 results = table: 0x22f27fd8  {blocking:true, pause_skip:false, time_done:false, completed:false}
+(10) Lua upvalue 'gameUpdateRef' at file 'game.lua:2739'
+	Local variables:
+	 self = table: 0x22923858  {F_GUIDE:false, F_CRASH_REPORTS:false, F_QUIT_BUTTON:true, HUD_tags:table: 0x2478a1b0 (more...)}
+	 dt = number: 0.0189942
+	 http_resp = nil
+(11) Lua upvalue 'upd' at Steamodded file 'src/ui.lua:81' 
+	Local variables:
+	 self = table: 0x22923858  {F_GUIDE:false, F_CRASH_REPORTS:false, F_QUIT_BUTTON:true, HUD_tags:table: 0x2478a1b0 (more...)}
+	 dt = number: 0.0189942
+(12) Lua upvalue 'upd' at file 'main.lua:1759'
+	Local variables:
+	 self = table: 0x22923858  {F_GUIDE:false, F_CRASH_REPORTS:false, F_QUIT_BUTTON:true, HUD_tags:table: 0x2478a1b0 (more...)}
+	 dt = number: 0.0189942
+(13) Lua upvalue 'upd' at file 'Items/Blinds.lua:1320' (from mod with id Cryptid)
+	Local variables:
+	 self = table: 0x22923858  {F_GUIDE:false, F_CRASH_REPORTS:false, F_QUIT_BUTTON:true, HUD_tags:table: 0x2478a1b0 (more...)}
+	 dt = number: 0.0189942
+(14) Lua upvalue 'upd' at file 'Items/CodeCards.lua:4482' (from mod with id Cryptid)
+	Local variables:
+	 self = table: 0x22923858  {F_GUIDE:false, F_CRASH_REPORTS:false, F_QUIT_BUTTON:true, HUD_tags:table: 0x2478a1b0 (more...)}
+	 dt = number: 0.0189942
+(15) Lua upvalue 'upd' at file 'Items/Decks.lua:446' (from mod with id Cryptid)
+	Local variables:
+	 self = table: 0x22923858  {F_GUIDE:false, F_CRASH_REPORTS:false, F_QUIT_BUTTON:true, HUD_tags:table: 0x2478a1b0 (more...)}
+	 dt = number: 0.0189942
+(16) Lua upvalue 'upd' at file 'Items/MiscJokers.lua:7116' (from mod with id Cryptid)
+	Local variables:
+	 self = table: 0x22923858  {F_GUIDE:false, F_CRASH_REPORTS:false, F_QUIT_BUTTON:true, HUD_tags:table: 0x2478a1b0 (more...)}
+	 dt = number: 0.0189942
+(17) Lua method 'update' at file 'Cryptid.lua:3009' (from mod with id Cryptid)
+	Local variables:
+	 self = table: 0x22923858  {F_GUIDE:false, F_CRASH_REPORTS:false, F_QUIT_BUTTON:true, HUD_tags:table: 0x2478a1b0 (more...)}
+	 dt = number: 0.0189942
+(18) Lua upvalue 'oldupd' at file 'main.lua:1002'
+	Local variables:
+	 dt = number: 0.0189942
+(19) Lua field 'update' at file 'main.lua:1786'
+	Local variables:
+	 dt = number: 0.0189942
+(20) Lua function '?' at file 'main.lua:931' (best guess)
+(21) global C function 'xpcall'
+(22) LÖVE function at file 'boot.lua:377' (best guess)
+	Local variables:
+	 func = Lua function '?' (defined at line 902 of chunk main.lua)
+	 inerror = boolean: true
+	 deferErrhand = Lua function '(LÖVE Function)' (defined at line 348 of chunk [love "boot.lua"])
+	 earlyinit = Lua function '(LÖVE Function)' (defined at line 355 of chunk [love "boot.lua"])
+
+INFO - [G] file not found: main.lua: No such file or directory
+INFO - [G] file not found: main.lua: No such file or directory
+INFO - [G] 2025-02-12 20:47:31 :: INFO  :: StackTrace :: Additional Context:
+Balatro Version: 1.0.1n-FULL
+Modded Version: 1.0.0~ALPHA-1304a-STEAMODDED
+LÖVE Version: 11.5.0
+Lovely Version: 0.6.0
+Steamodded Mods:
+    1: Talisman by MathIsFun_, Mathguy24, jenwalter666, cg-223 [ID: Talisman, Version: 2.0.2, Uses Lovely]
+        Break Infinity: omeganum
+    2: Cryptid by MathIsFun_, Cryptid and Balatro Discords [ID: Cryptid, Priority: 2147483647, Version: 0.5.3c, Uses Lovely]
+Lovely Mods:
