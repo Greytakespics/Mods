@@ -1,0 +1,322 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 0
+
+[[patches]]
+[patches.pattern]
+target = 'game.lua'
+pattern = '''chips_text = '0','''
+position = 'after'
+payload = '''blind_edition = {
+    Small = "",
+    Big = "",
+    Boss = "",
+    first_ante = true
+},
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = 'functions/UI_definitions.lua'
+pattern = '''G.GAME.orbital_choices = G.GAME.orbital_choices or {}'''
+position = 'before'
+payload = '''local a_table = {
+    {shader = 'dissolve', shadow_height = 0.05},
+    {shader = 'dissolve'},
+}
+if G.GAME.blind_edition and G.GAME.blind_edition[type] then
+    local edi = G.P_BLIND_EDITIONS[G.GAME.blind_edition[type]]
+    if edi.blind_shader and (type_(edi.blind_shader) == "table") then
+        for i2, j2 in ipairs(edi.blind_shader) do
+            a_table[#a_table + 1] = {shader = j2}
+        end
+    elseif edi.blind_shader then
+        a_table[#a_table + 1] = {shader = edi.blind_shader}
+    end
+end
+blind_choice.animation:define_draw_steps(a_table)'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = 'blind.lua'
+pattern = '''self.children.animatedSprite:draw_shader('dissolve')'''
+position = 'after'
+payload = '''if G.GAME.blind_edition and G.GAME.blind_edition[G.GAME.blind_on_deck] then
+    local edi = G.P_BLIND_EDITIONS[G.GAME.blind_edition[G.GAME.blind_on_deck]]
+    if edi.blind_shader and (type(edi.blind_shader) == "table") then
+        for i2, j2 in ipairs(edi.blind_shader) do
+            self.children.animatedSprite:draw_shader(j2)
+        end
+    elseif edi.blind_shader then
+        self.children.animatedSprite:draw_shader(edi.blind_shader)
+    end
+end'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = 'blind.lua'
+pattern = '''if self.name == 'The Eye' and not reset then'''
+position = 'before'
+payload = '''if G.GAME.blind_edition and G.GAME.blind_edition[G.GAME.blind_on_deck] and not reset and (blind and blind.name and blind.name ~= '') then
+    local edi = G.P_BLIND_EDITIONS[G.GAME.blind_edition[G.GAME.blind_on_deck]]
+    if edi.set_blind and (type(edi.set_blind) == "function") then
+        edi:set_blind(G.GAME.blind_on_deck)
+    end
+end'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = 'blind.lua'
+pattern = '''function Blind:defeat(silent)'''
+position = 'after'
+payload = '''   if G.GAME.blind_edition and G.GAME.blind_edition[G.GAME.blind_on_deck] then
+        local edi = G.P_BLIND_EDITIONS[G.GAME.blind_edition[G.GAME.blind_on_deck]]
+        if edi.defeat and (type(edi.defeat) == "function") then
+            edi:defeat(G.GAME.blind_on_deck)
+        end
+    end'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = 'game.lua'
+pattern = '''self.P_LOCKED = {}'''
+position = 'after'
+payload = '''self.P_BLIND_EDITIONS = {}'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = 'functions/UI_definitions.lua'
+pattern = '''local run_info_colour = run_info and (blind_state == 'Defeated' and G.C.GREY or blind_state == 'Skipped' and G.C.BLUE or blind_state == 'Upcoming' and G.C.ORANGE or blind_state == 'Current' and G.C.RED or G.C.GOLD)'''
+position = 'after'
+payload = '''local extra_dollars_mod = nil
+if G.GAME.blind_edition and G.GAME.blind_edition[type] then
+    local edi = G.P_BLIND_EDITIONS[G.GAME.blind_edition[type]]
+    if edi.has_text ~= false then
+        local loc_vars = edi.loc_vars and edi:loc_vars(type) or {}
+        local desc = localize{type = 'raw_descriptions', key = edi.key, set = 'BlindEdition', vars = loc_vars}
+        for k, v in ipairs(desc) do
+            blind_desc_nodes[#blind_desc_nodes+1] = {n=G.UIT.R, config={align = "cm", maxw = 2.8}, nodes={
+            {n=G.UIT.T, config={text = v or '-', scale = 0.32, colour = disabled and G.C.UI.TEXT_INACTIVE or G.C.DARK_EDITION, shadow = not disabled}}
+            }}
+        end
+        text_table[1] = true
+    end
+    if edi.dollars_mod then
+        if type_(edi.dollars_mod) == "function" then
+            extra_dollars_mod = edi:dollars_mod(blind_choice.config.dollars)
+        else
+            extra_dollars_mod = blind_choice.config.dollars + edi.dollars_mod
+        end
+    end
+end'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = 'blind.lua'
+pattern = '''local loc_target = localize{type = 'raw_descriptions', key = self.config.blind.key, set = 'Blind', vars = loc_vars or self.config.blind.vars}'''
+position = 'after'
+payload = '''if G.GAME.blind_edition and G.GAME.blind_edition[G.GAME.blind_on_deck] then
+    local edi = G.P_BLIND_EDITIONS[G.GAME.blind_edition[G.GAME.blind_on_deck]]
+    if edi.has_text ~= false then
+        local loc_vars = edi.loc_vars and (type(edi.loc_vars) == "function") and edi:loc_vars(G.GAME.blind_on_deck) or {}
+        local edi_desc = localize{type = 'raw_descriptions', key = edi.key, set = 'BlindEdition', vars = loc_vars}
+        for i, j in ipairs(edi_desc) do
+            table.insert(loc_target, j)
+        end
+    end
+end'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = 'functions/UI_definitions.lua'
+pattern = '''local blind_amt = get_blind_amount(G.GAME.round_resets.blind_ante)*blind_choice.config.mult*G.GAME.starting_params.ante_scaling'''
+position = 'after'
+payload = '''if G.GAME.blind_edition and G.GAME.blind_edition[type] then
+    local edi = G.P_BLIND_EDITIONS[G.GAME.blind_edition[type]]
+    if edi.blind_size_mult then
+        if type_(edi.blind_size_mult) == "function" then
+            blind_amt = edi.blind_size_mult(blind_amt)
+            blind_amt = blind_amt - blind_amt%(10^math.floor(math.log10(blind_amt)-1))
+        else
+            blind_amt = edi.blind_size_mult * blind_amt
+            blind_amt = blind_amt - blind_amt%(10^math.floor(math.log10(blind_amt)-1))
+        end
+    end
+end'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = 'blind.lua'
+pattern = '''self.chips = get_blind_amount(G.GAME.round_resets.ante)*self.mult*G.GAME.starting_params.ante_scaling'''
+position = 'after'
+payload = '''if G.GAME.blind_edition and G.GAME.blind_edition[G.GAME.blind_on_deck] then
+    local edi = G.P_BLIND_EDITIONS[G.GAME.blind_edition[G.GAME.blind_on_deck]]
+    if edi.blind_size_mult then
+        if type(edi.blind_size_mult) == "function" then
+            self.chips = edi.blind_size_mult(self.chips)
+            self.chips = self.chips - self.chips%(10^math.floor(math.log10(self.chips)-1))
+        else
+            self.chips = edi.blind_size_mult * self.chips
+            self.chips = self.chips - self.chips%(10^math.floor(math.log10(self.chips)-1))
+        end
+    end
+end'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = 'functions/common_events.lua'
+pattern = '''elseif blindname == 'Small Blind' or blindname == 'Big Blind' or blindname == '' then'''
+position = 'before'
+payload = '''elseif (G.GAME.reenter_run or (G.GAME.blind and (G.GAME.blind.name ~= ""))) and (((blindname == 'Small Blind') and G.GAME.blind_edition and G.GAME.blind_edition["Small"] and not G.P_BLIND_EDITIONS[G.GAME.blind_edition["Small"]]:no_color()) or ((blindname == 'Big Blind') and G.GAME.blind_edition and G.GAME.blind_edition["Big"] and not G.P_BLIND_EDITIONS[G.GAME.blind_edition["Big"]]:no_color())) then
+    local edi = G.P_BLIND_EDITIONS[G.GAME.blind_edition[(blindname == 'Small Blind') and "Small" or "Big"]]
+    local new_colour = G.C.BLIND['Small']
+    local special_colour = nil
+    local tertiary_colour = nil
+    if edi.new_colour or edi.colour then
+        new_colour = edi.new_colour or edi.colour
+    end
+    if edi.special_colour then
+        special_colour = edi.special_colour
+    end
+    if edi.tertiary_colour then
+        tertiary_colour = edi.tertiary_colour
+    end
+    ease_background_colour{new_colour = new_colour, special_colour = special_colour, tertiary_colour = tertiary_colour, contrast = edi.contrast or 1}
+elseif (G.GAME.reenter_run or (G.GAME.blind and (G.GAME.blind.name ~= ""))) and not (blindname == 'Small Blind' or blindname == 'Big Blind' or blindname == '') and G.GAME.blind_edition and G.GAME.blind_edition["Boss"] and not G.P_BLIND_EDITIONS[G.GAME.blind_edition["Big"]]:no_color() then
+    local boss_col = G.C.BLACK
+    local new_colour = nil
+    local special_colour = nil
+    local tertiary_colour = nil
+    local valid = true
+    for k, v in pairs(G.P_BLINDS) do
+        if v.name == blindname then
+            if v.boss.showdown then 
+                
+                new_colour = G.C.BLUE
+                special_colour = G.C.RED
+                tertiary_colour = darken(G.C.BLACK, 0.4)
+                valid = false
+            end
+            boss_col = v.boss_colour or G.C.BLACK
+            break
+        end
+    end
+    if valid then
+        new_colour = lighten(mix_colours(boss_col, G.C.BLACK, 0.3), 0.1)
+        special_colour = boss_col
+    end
+
+    local edi = G.P_BLIND_EDITIONS[G.GAME.blind_edition["Boss"]]
+    
+    if edi.new_colour or edi.colour then
+        new_colour = edi.new_colour or edi.colour
+    end
+    if edi.special_colour then
+        new_colour = edi.special_colour
+    end
+    if edi.tertiary_colour then
+        new_colour = edi.tertiary_colour
+    end
+    ease_background_colour{new_colour = new_colour, special_colour = special_colour, tertiary_colour = tertiary_colour, contrast = edi.contrast or valid and 2 or 3}
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = 'blind.lua'
+pattern = '''if G.GAME.modifiers.no_blind_reward and G.GAME.modifiers.no_blind_reward[self:get_type()] then self.dollars = 0 end'''
+position = 'after'
+payload = '''if G.GAME.blind_edition and G.GAME.blind_edition[G.GAME.blind_on_deck] then
+    local edi = G.P_BLIND_EDITIONS[G.GAME.blind_edition[G.GAME.blind_on_deck]]
+    if edi.dollars_mod then
+        if type(edi.dollars_mod) == "function" then
+            self.dollars = edi:dollars_mod(self.dollars)
+        else
+            self.dollars = self.dollars + edi.dollars_mod
+        end
+    end
+end'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = 'functions/UI_definitions.lua'
+pattern = '''{n=G.UIT.T, config={text = string.rep(localize("$"), blind_choice.config.dollars)..'+', scale = 0.35, colour = disabled and G.C.UI.TEXT_INACTIVE or G.C.MONEY, shadow = not disabled}}'''
+position = 'at'
+payload = '''{n=G.UIT.T, config={text = dollars_to_string(extra_dollars_mod or blind_choice.config.dollars)..'+', scale = 0.35, colour = disabled and G.C.UI.TEXT_INACTIVE or (((extra_dollars_mod or blind_choice.config.dollars) < 0) and G.C.RED or G.C.MONEY), shadow = not disabled}}'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = 'game.lua'
+pattern = '''else ease_background_colour_blind(G.STATE, saveTable.BLIND.name:gsub("%s+", "") ~= '' and saveTable.BLIND.name or 'Small Blind') end'''
+position = 'at'
+payload = '''
+else 
+    G.GAME.reenter_run = true
+    G.GAME.blind_edition = saveTable.GAME.blind_edition
+    ease_background_colour_blind(G.STATE, saveTable.BLIND.name:gsub("%s+", "") ~= '' and saveTable.BLIND.name or 'Small Blind')
+    G.GAME.reenter_run = nil end'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = 'functions/button_callbacks.lua'
+pattern = '''if G.GAME.modifiers.no_blind_reward and (G.GAME.blind and G.GAME.modifiers.no_blind_reward[G.GAME.blind:get_type()]) then'''
+position = 'at'
+payload = '''if (G.GAME.modifiers.no_blind_reward and (G.GAME.blind and G.GAME.modifiers.no_blind_reward[G.GAME.blind:get_type()])) and (not G.GAME.blind_edition or not G.GAME.blind_edition[G.GAME.blind:get_type()] or not G.P_BLIND_EDITIONS[G.GAME.blind_edition[G.GAME.blind_on_deck]].dollars_mod or 
+(((type(G.P_BLIND_EDITIONS[G.GAME.blind_edition[G.GAME.blind_on_deck]].dollars_mod) == "function") and (G.P_BLIND_EDITIONS[G.GAME.blind_edition[G.GAME.blind_on_deck]].dollars_mod(0) == 0)) or G.P_BLIND_EDITIONS[G.GAME.blind_edition[G.GAME.blind_on_deck]].dollars_mod == 0)) then'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = 'functions/UI_definitions.lua'
+pattern = '''extras = create_UIBox_blind_tag(type, run_info)'''
+position = 'at'
+payload = '''if not G.GAME.blind_edition or not G.GAME.blind_edition[type] or not G.P_BLIND_EDITIONS[G.GAME.blind_edition[type]].no_skip then
+    extras = create_UIBox_blind_tag(type, run_info)
+end'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = 'functions/UI_definitions.lua'
+pattern = '''{n=G.UIT.O, config={object = DynaText({string = {_dollars and string.rep(localize('$'),_dollars) or '-'}, colours = {G.C.MONEY}, rotate = true, bump = true, silent = true, scale = 0.45})}},'''
+position = 'at'
+payload = '''{n=G.UIT.O, config={object = DynaText({string = {dollars_to_string(_dollars)}, colours = {(_dollars < 0) and G.C.RED or G.C.MONEY}, rotate = true, bump = true, silent = true, scale = 0.45})}},'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = 'blind.lua'
+pattern = '''G.GAME.current_round.dollars_to_be_earned = self.dollars > 0 and (string.rep(localize('$'), self.dollars)..'') or ('')'''
+position = 'at'
+payload = '''G.GAME.current_round.dollars_to_be_earned = dollars_to_string(self.dollars)'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = 'functions/common_events.lua'
+pattern = '''if num_dollars < 0 then dollars_to_loop = num_dollars*-1 else dollars_to_loop = num_dollars end'''
+position = 'after'
+payload = '''if num_dollars < 0 then dollars_to_loop = dollars_to_loop + 1 end'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = 'functions/button_callbacks.lua'
+pattern = '''G.FUNCS.reroll_boss = function(e)'''
+position = 'after'
+payload = '''   set_blind_editions(true)'''
+match_indent = true

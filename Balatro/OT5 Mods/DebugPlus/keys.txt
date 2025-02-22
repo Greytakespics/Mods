@@ -1,0 +1,32 @@
+Most of these require you hold ctrl to run (can be disabled in the config)
+
+Built in:
+tab: menu
+1: unlock card
+2: discover card
+3: spawn card 
+q: Switch edition
+h: toggle UI
+b: new run
+l: load run 
+j: go to menu (might break)
+8: toggle mouse visiblity
+9: toggle tooltips
+space: live_test (Seems to just be a localthunk code tester)
+v: profiler (DebugPlus enhances)
+p: performance mod (DebugPlus enhances)
+
+modded:
+W: Set enhancement
+E: Set seal
+A: Toggle eternal
+S: Toggle perishable
+D: Toggle rental
+F: Toggle coupon shop card
+Hold z + 1-3: Save state to slot
+hold x + 1-3: Load state from slot
+R: Destroy Card
+C: Duplicate Card
+up / down: increase / decrease rank
+left / right: cycle suit
+M: Reload Atlases

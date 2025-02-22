@@ -1,0 +1,189 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 0
+
+# Core 
+[[patches]]
+[patches.pattern]
+target = "conf.lua"
+pattern = "_RELEASE_MODE = true"
+position = "at"
+payload = '_RELEASE_MODE = false'
+match_indent = true
+overwrite = true
+
+[[patches]]
+[patches.pattern]
+target = "game.lua"
+pattern = "if self.real_dt > 0.05 then print('LONG DT @ '..math.floor(G.TIMERS.REAL)..': '..self.real_dt) end"
+position = "at"
+payload = "if require('debugplus.config').getValue('enableLongDT') and self.real_dt > 0.05 then print('LONG DT @ '..math.floor(G.TIMERS.REAL)..': '..self.real_dt) end"
+match_indent = true
+overwrite = false
+
+# Note this patch provides the debugplus variable for the profile and perf patches
+[[patches]]
+[patches.pattern]
+target = "engine/controller.lua"
+pattern = "if key == 'v' then"
+position = "before"
+payload = '''
+local debugplus = require("debugplus.core")
+debugplus.handleKeys(self, key, dt)
+'''
+match_indent = true
+overwrite = false
+
+[[patches]]
+[patches.pattern]
+target = "engine/controller.lua"
+pattern = 'if _card.ability.consumeable and G.consumeables and #G.consumeables.cards < G.consumeables.config.card_limit then'
+position = "before"
+payload = '''
+local debugplus = require("debugplus.core")
+debugplus.handleSpawn(self, _card)
+'''
+match_indent = true
+overwrite = false
+
+[[patches]]
+[patches.pattern]
+target = "functions/UI_definitions.lua"
+pattern = 'function create_UIBox_debug_tools()'
+position = "after"
+payload = '''
+local debugplus = require("debugplus.core")
+debugplus.registerButtons()
+'''
+match_indent = true
+overwrite = false
+
+[[patches]]
+[patches.pattern]
+target = "functions/UI_definitions.lua"
+pattern = 'UIBox_button{ label = {"Background"}, button = "DT_toggle_background", minw = 1.7, minh = 0.4, scale = 0.35},'
+position = "after"
+payload = '''
+UIBox_button{ label = {"Win Blind"}, button = "DT_win_blind", minw = 1.7, minh = 0.4, scale = 0.35},
+UIBox_button{ label = {"Double Tag"}, button = "DT_double_tag", minw = 1.7, minh = 0.4, scale = 0.35},
+'''
+match_indent = true
+overwrite = false
+
+[[patches]]
+[patches.pattern]
+target = "functions/UI_definitions.lua"
+pattern = '{n=G.UIT.T, config={text = "and press [Q] to cycle Edition", scale = 0.25, colour = G.C.WHITE, shadow = true}}'
+position = "at"
+# This patch is super jank 
+# when lovely supports regex, move the save state to it's own block.
+payload = '''
+    {n=G.UIT.T, config={text = "hold [" .. require("debugplus.util").ctrlText .. "] (togglable in config)", scale = 0.25, colour = G.C.WHITE, shadow = true}}
+}},
+{n=G.UIT.R, config={align = "cm", padding = 0.05}, nodes={
+    {n=G.UIT.T, config={text = "and press [Q] to cycle Edition", scale = 0.25, colour = G.C.WHITE, shadow = true}}
+}}, 
+{n=G.UIT.R, config={align = "cm", padding = 0.05}, nodes={
+    {n=G.UIT.T, config={text = "press [W] to cycle Enhancement", scale = 0.25, colour = G.C.WHITE, shadow = true}}
+}},
+{n=G.UIT.R, config={align = "cm", padding = 0.05}, nodes={
+    {n=G.UIT.T, config={text = "press [E] to cycle Seal", scale = 0.25, colour = G.C.WHITE, shadow = true}}
+}},
+{n=G.UIT.R, config={align = "cm", padding = 0.05}, nodes={
+    {n=G.UIT.T, config={text = "press [A/S/D] to toggle Eternal/Perishable/Rental", scale = 0.2, colour = G.C.WHITE, shadow = true}}
+}},
+{n=G.UIT.R, config={align = "cm", padding = 0.05}, nodes={
+    {n=G.UIT.T, config={text = "press [F] to toggle Coupon (make free)", scale = 0.25, colour = G.C.WHITE, shadow = true}}
+}},
+{n=G.UIT.R, config={align = "cm", padding = 0.05}, nodes={
+    {n=G.UIT.T, config={text = "press [R/C] to destroy/copy card", scale = 0.25, colour = G.C.WHITE, shadow = true}}
+}},
+{n=G.UIT.R, config={align = "cm", padding = 0.05}, nodes={
+    {n=G.UIT.T, config={text = "press [M] to reload atlases", scale = 0.25, colour = G.C.WHITE, shadow = true}}
+}},
+{n=G.UIT.R, config={align = "cm", padding = 0.05}, nodes={
+    {n=G.UIT.T, config={text = "press [UP/DOWN] to cycle rank", scale = 0.2, colour = G.C.WHITE, shadow = true}}
+}},
+{n=G.UIT.R, config={align = "cm", padding = 0.00}, nodes={
+    {n=G.UIT.T, config={text = "press [RIGHT/LEFT] to cycle suit", scale = 0.2, colour = G.C.WHITE, shadow = true}}
+}},
+{n=G.UIT.R, config={align = "cm", padding = 0.05}, nodes={
+    {n=G.UIT.T, config={text = "press [z] plus [1-3] to save a save state", scale = 0.2, colour = G.C.WHITE, shadow = true}}
+}},
+{n=G.UIT.R, config={align = "cm", padding = 0.00}, nodes={
+    {n=G.UIT.T, config={text = "press [x] plus [1-3] to load a save state", scale = 0.2, colour = G.C.WHITE, shadow = true}}
+'''
+match_indent = true
+overwrite = true
+
+[[patches]] # Readds the debug info to v1.0.1g+ / show hud config
+[patches.pattern]
+target = "game.lua"
+pattern = 'if not _RELEASE_MODE and G.DEBUG and not G.video_control and G.F_VERBOSE then'
+position = "at"
+payload = '''if require("debugplus.config").getValue("showHUD") and not G.video_control and G.F_VERBOSE then'''
+match_indent = true
+overwrite = false
+
+#
+## Better vanilla debugs
+#
+
+[[patches]]
+[patches.pattern]
+target = "game.lua"
+match_indent = true
+pattern = 'love.graphics.print("Current FPS: "..fps, 10, 10)'
+position = "at"
+payload = '''
+do
+    local otherSize = 0
+    for k,v in pairs(G.E_MANAGER.queues or {}) do 
+        if k ~= 'base' then 
+            otherSize = otherSize + #v
+        end
+    end
+    if otherSize ~= 0 then
+        love.graphics.print(string.format("Current FPS: %d\nBase event queue: %d\nOther event queues: %d", fps, #(G.E_MANAGER.queues and G.E_MANAGER.queues.base or {}), otherSize), 10, 10)
+    else
+        love.graphics.print(string.format("Current FPS: %d\nBase event queue: %d", fps, #(G.E_MANAGER.queues and G.E_MANAGER.queues.base or {})), 10, 10)
+    end
+end
+'''
+
+# Performance profiler enabled by pressing v, prints results to console.
+[[patches]]
+[patches.pattern]
+target = "engine/controller.lua"
+pattern = '''print(G.prof.report()); G.prof = nil end'''
+position = "after"
+payload = '''
+debugplus.profileMessage()
+'''
+match_indent = true
+
+# Profiler overlay enabled by pressing p
+[[patches]]
+[patches.pattern]
+target = "engine/controller.lua"
+pattern = '''G.SETTINGS.perf_mode = not G.SETTINGS.perf_mode'''
+position = "after"
+payload = '''
+debugplus.togglePerfUI()
+'''
+match_indent = true
+
+# Makes the text in the profiler not get obscured
+[[patches]]
+[patches.pattern]
+target = "game.lua"
+pattern = '''love.graphics.setColor(a == 2 and 0.5 or 1, a == 2 and 1 or 0.5, 1,1)'''
+position = "before"
+payload = '''
+v_off = v_off + section_h
+end
+local v_off = v_off - section_h * #b.checkpoint_list
+for k, v in ipairs(b.checkpoint_list) do
+'''
+match_indent = true

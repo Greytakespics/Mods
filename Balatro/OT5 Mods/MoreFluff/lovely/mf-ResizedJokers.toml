@@ -1,0 +1,89 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 0
+
+# thanks, cryptid
+
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = 'if center.name == "Wee Joker" and (center.discovered or self.bypass_discovery_center) then'
+position = "before"
+payload = '''
+if center.name == "Huge Joker" and (center.discovered or self.bypass_discovery_center) then 
+  H = H*1.5
+  W = W*1.5
+  self.T.h = H
+  self.T.w = W
+end
+if center.name == "Mashup Album" and (center.discovered or self.bypass_discovery_center) then 
+  H = W
+  self.T.h = H
+end
+if center.name == "Pixel Joker" and (center.discovered or self.bypass_discovery_center) then 
+  H = W * 16 / 95
+  W = W * 16 / 95
+  self.T.h = H
+  self.T.w = W
+end
+if center.set == "Colour" then 
+  H = H * 87 / 95
+  self.T.h = H
+end
+if center.name == "odd-jimbophone" then 
+  W = W * 57 / 71
+  self.T.w = W
+end
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = "if _center.name == 'Photograph' and (_center.discovered or self.bypass_discovery_center) then"
+position = "before"
+payload = '''
+if _center.name == 'Mashup Album' and (_center.discovered or self.bypass_discovery_center) then 
+  self.children.center.scale.y = self.children.center.scale.x
+end
+if _center.name == 'Pixel Joker' and (_center.discovered or self.bypass_discovery_center) then 
+  self.children.center.scale.y = self.children.center.scale.x
+  self.children.center.scale.x = self.children.center.scale.x * (16 / 95)
+  self.children.center.scale.y = self.children.center.scale.y * (16 / 95)
+end
+if _center.set == 'Colour' then 
+  self.children.center.scale.y = self.children.center.scale.y * (87 / 95)
+end
+if _center.name == 'odd-jimbophone' then 
+  self.children.center.scale.x = self.children.center.scale.x * (57 / 71)
+end
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = 'elseif self.config.center.name == "Wee Joker" then'
+position = "before"
+payload = '''
+elseif self.config.center.name == "Huge Joker" then 
+  self.T.h = H*scale*1.5*scale
+  self.T.w = W*scale*1.5*scale
+elseif self.config.center.name == "Mashup Album" then 
+  H = W
+  self.T.h = H*scale
+  self.T.w = W*scale
+elseif self.config.center.name == "Pixel Joker" then 
+  H = W * 16 / 95 * scale * scale
+  W = W * 16 / 95 * scale * scale
+  self.T.h = H
+  self.T.w = W
+elseif self.config.center.set == "Colour" then 
+  self.T.h = H*scale*87/95*scale
+  self.T.w = W*scale
+elseif self.config.center.name == "odd-jimbophone" then 
+  self.T.h = H*scale
+  self.T.w = W*scale*57/71*scale
+'''
+match_indent = true
